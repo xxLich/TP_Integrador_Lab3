@@ -108,7 +108,9 @@ CREATE TABLE DetalleVenta(
 	FOREIGN KEY(IDComponente) REFERENCES Componentes(IDComponente)
 );
 GO
+
 -- DATOS AGREGADOS  ( SI LES DA  ERROR VERIFIQUEN LOS IDUsuarios-IDVentas)
+
 INSERT INTO Rol (Nombre) VALUES 
 ('ADMIN'),
 ('EMPLEADO');
@@ -164,8 +166,3 @@ INSERT INTO DetalleVenta (IDVenta, IDComponente, Cantidad, PrecioUnitario) VALUE
 (3, 2, 2, 22000),
 (4, 3, 4, 30000),
 (5, 4, 1, 60000);
-
-
-
-
-
