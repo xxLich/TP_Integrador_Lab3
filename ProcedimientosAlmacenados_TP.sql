@@ -72,3 +72,120 @@ EXEC Registrar_Ingreso_De_Stock
 	@Detalles = @DetalleStock;
 
 	*/
+----------------------------COMPONENTES
+CREATE PROCEDURE ALTACOMPONENTES 
+	@Nombre varchar(50),
+	@Descripcion varchar(100),
+	@IDCategoria int,
+	@PrecioVenta decimal (10,2),
+	@PrecioCosto decimal (10,2),
+	@Stock int,
+	@FechaCreacion date,
+	@Estado bit
+AS
+BEGIN
+	INSERT INTO Componentes(Nombre, Descripcion, IDCategoria, PrecioVenta, PrecioCosto, Stock, FechaCreacion, Estado)
+	VALUES (@Nombre, @Descripcion, @IDCategoria, @PrecioVenta, @PrecioCosto, @Stock, @FechaCreacion, @Estado)
+END
+
+
+
+CREATE PROCEDURE BAJACOMPONENTES
+	@IDComponente INT
+AS
+BEGIN
+	DELETE FROM Componentes WHERE IDComponente = @IDComponente
+END
+
+
+CREATE PROCEDURE MODIFICACIONCOMPONENTES
+	@IDComponente int,
+	@Nombre varchar(50),
+	@Descripcion varchar(100),
+	@IDCategoria int,
+	@PrecioVenta decimal (10,2),
+	@PrecioCosto decimal (10,2),
+	@Stock int,
+	@FechaCreacion date,
+	@Estado bit
+AS 
+	BEGIN 
+		UPDATE Componentes
+		SET
+		IDCategoria = @IDCategoria,
+		Descripcion = @Descripcion,
+		PrecioVenta = @PrecioVenta,
+		PrecioCosto = @PrecioCosto,
+		Stock = @Stock,
+		FechaCreacion = @FechaCreacion,
+		Estado = @Estado
+	WHERE IDComponente = @IDComponente
+END
+
+
+
+--- CATEGORIA
+
+CREATE PROCEDURE ALTACATEGORIA
+	@Nombre varchar(50),
+	@Descripcion varchar(100)
+AS
+	BEGIN
+		INSERT INTO Categoria (Nombre,Descripcion)
+		VALUES (@Nombre,@Descripcion)
+		END;
+
+CREATE PROCEDURE BAJACATEGORIA
+	@IDCategoria INT
+AS
+	BEGIN
+		DELETE FROM Categoria
+			WHERE IDCategoria = @IDCategoria
+	END;
+
+CREATE PROCEDURE MODIFICACIONCATEGORIA
+	@IDCategoria int,
+	@Nombre varchar(10),
+	@Descrion varchar (100)
+AS
+	BEGIN 
+		UPDATE Categoria
+			SET 
+			Nombre = @Nombre,
+			Descripcion = @Descrion
+			WHERE IDCategoria = @IDCategoria
+	END;
+	
+
+---PROVEEDOR
+CREATE PROCEDURE ALTAPROVEEDOR
+	@Nombre varchar(50),
+	@Descripcion varchar(100)
+as 
+	BEGIN
+		INSERT INTO Proveedor(Nombre,Descripcion)
+		VALUES (@Nombre,@Descripcion)
+	END
+
+CREATE PROCEDURE BAJAPROVEEDOR
+	@IDProveedor int
+as
+	BEGIN
+		DELETE FROM Proveedor
+		WHERE IDProveedor = @IDProveedor
+	end;
+
+CREATE PROCEDURE MODIFICACIONPROVEEDOR
+	@IDProveedor int,
+	@Nombre varchar(10),
+	@Descripcion varchar(50)
+as 
+	begin
+		UPDATE Proveedor
+			SET 
+			Nombre = @Nombre,
+			Descripcion = @Descripcion
+			WHERE IDProveedor = @IDProveedor
+	END
+
+
