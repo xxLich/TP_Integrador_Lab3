@@ -187,5 +187,33 @@ as
 			Descripcion = @Descripcion
 			WHERE IDProveedor = @IDProveedor
 	END
+---ABM USUAARIOS 
+CREATE PROCEDURE MODIFICACIONUSUARIO
+	@IDUsuario int,
+	@Nombre varchar(10),
+	@Apellido varchar(50),
+	@Email varchar(255),
+	@Clave varchar(8),
+	@IDRol int,
+	@FechaRegistro date
+as
+	BEGIN
+		UPDATE Usuarios
+		SET
+		Nombre = @Nombre,
+		Apellido = @Apellido,
+		Email = @Email,
+		Clave = @Clave,
+		IDRol = @IDRol,
+		FechaRegristro = @FechaRegistro
+		WHERE IDUsuarios = @IDUsuario
+	END;
 
+CREATE PROCEDURE BAJAUSUARIO
+	@IDUsuario int
+AS
+	BEGIN
+	DELETE FROM Usuarios 
+	WHERE IDUsuarios = @IDUsuario
+	END;
 
