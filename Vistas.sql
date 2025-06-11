@@ -1,7 +1,7 @@
 USE TP_ITEGRADOR_GP4
 GO
 
--- Vistas
+-- Stock
 
 CREATE VIEW VW_Stock AS
 SELECT
@@ -27,14 +27,25 @@ WHERE D.IDIngreso = (
 	ORDER BY I2.FechaIngreso DESC, D2.IDIngreso DESC
 );
 GO
-/*
+
+-- Ventas
+
+CREATE VIEW VW_Ventas AS
 SELECT
 	V.IDVenta,
 	V.FechaVenta,
 	V.Total,
-	V.IDCliente
+	V.IDCliente,
+	D.IDDetalle,
+	D.IDComponente,
+	D.Cantidad,
+	D.PrecioUnitario,
+	S.Nombre_Componente,
+	S.Stock
 
 FROM Venta V
 INNER JOIN DetalleVenta D ON V.IDVenta = D.IDVenta
-INNER JOIN VW_Stock S ON D.IDComponente = S.IDComponente
-*/
+INNER JOIN VW_Stock S ON D.IDComponente = S.IDComponente;
+GO
+
+-- Resumen Ventas
