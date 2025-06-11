@@ -26,3 +26,15 @@ WHERE D.IDIngreso = (
 	WHERE D2.IDComponente = C.IDComponente
 	ORDER BY I2.FechaIngreso DESC, D2.IDIngreso DESC
 );
+GO
+/*
+SELECT
+	V.IDVenta,
+	V.FechaVenta,
+	V.Total,
+	V.IDCliente
+
+FROM Venta V
+INNER JOIN DetalleVenta D ON V.IDVenta = D.IDVenta
+INNER JOIN VW_Stock S ON D.IDComponente = S.IDComponente
+*/
