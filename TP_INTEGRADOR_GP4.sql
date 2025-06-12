@@ -19,19 +19,17 @@ CREATE TABLE Cliente(
 	DNI INT NOT NULL
 );
 GO
-
+-- HICE CAMBIO PARA UN ENCRIPTAR
 CREATE TABLE Usuarios(
-	IDUsuarios int PRIMARY KEY IDENTITY(1,1),
-	Nombre varchar(50) NOT NULL,
-	Apellido varchar(50) NOT NULL,
-	Email varchar(255) NOT NULL,
-	Clave varchar(8) NOT NULL,
-	IDRol int NOT NULL,
+	IDUsuarios INT PRIMARY KEY IDENTITY(1,1),
+	Nombre VARCHAR(50) NOT NULL,
+	Apellido VARCHAR(50) NOT NULL,
+	Email VARCHAR(255) NOT NULL,
+	Clave VARBINARY(64) NOT NULL, -- Cambio importante: ahora es VARBINARY
+	IDRol INT NOT NULL,
 	FechaRegristro DATETIME NOT NULL,
-
 	FOREIGN KEY(IDRol) REFERENCES Rol(IDRol)
 );
-GO
 
 CREATE TABLE Venta(
 	IDVenta INT PRIMARY KEY IDENTITY(1,1),
