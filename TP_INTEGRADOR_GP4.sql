@@ -119,9 +119,10 @@ INSERT INTO Rol (Nombre) VALUES
 
 -- Insertar Usuarios
 INSERT INTO Usuarios (Nombre, Apellido, Email, Clave, IDRol, FechaRegristro) VALUES
-('Juan', 'Pérez', 'juanperez@mail.com', '12345678', 1, GETDATE()),
-('Lucía', 'Gómez', 'luciagomez@mail.com', '87654321', 2, GETDATE()),
-('Carlos', 'López', 'carloslopez@mail.com', '45671234', 3, GETDATE());
+('Juan', 'Pérez', 'juanperez@mail.com', HASHBYTES('SHA2_256', '12345678'), 1, GETDATE()),
+('Lucía', 'Gómez', 'luciagomez@mail.com', HASHBYTES('SHA2_256', '87654321'), 2, GETDATE()),
+('Carlos', 'López', 'carloslopez@mail.com', HASHBYTES('SHA2_256', '45671234'), 3, GETDATE());
+
 
 -- Insertar Categorías
 INSERT INTO Categoria (Nombre, Descripcion) VALUES
