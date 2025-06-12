@@ -193,48 +193,66 @@ CREATE PROCEDURE ALTAUSUARIO
 	@Nombre VARCHAR(50),
 	@Apellido VARCHAR(50),
 	@Email VARCHAR(255),
-	@Clave VARCHAR(100),  
-	@IDRol INT,
-	@FechaRegristro DATETIME
+	@Clave VARCHAR(100),        -- La clave en texto plano que se hashéa
+	@IDRol INT
 AS
 BEGIN
-	INSERT INTO Usuarios (Nombre, Apellido, Email, Clave, IDRol, FechaRegristro)
+	INSERT INTO Usuarios (Nombre, Apellido, Email, Clave, IDRol, FechaRegristro, Activo)
 	VALUES (
 		@Nombre,
 		@Apellido,
 		@Email,
-		HASHBYTES('SHA2_256', CONVERT(VARCHAR(100), @Clave)), 
+		HASHBYTES('SHA2_256', @Clave),  -- Encripta la clave
 		@IDRol,
-		@FechaRegristro
-	)
+		GETDATE(),
+		1 -- Activo por defecto
+	);
 END
+
 	
 CREATE PROCEDURE MODIFICACIONUSUARIO
-	@IDUsuarios INT,
+	@IDUsuario INT,
 	@Nombre VARCHAR(50),
 	@Apellido VARCHAR(50),
 	@Email VARCHAR(255),
-	@Clave VARCHAR(100),
+	@Clave VARCHAR(100),  
 	@IDRol INT,
-	@FechaRegristro DATETIME
+	@Activo BIT
+AS
+BEGIN
+	IF @Clave IS NULL OR @Clave = ''
+	BEGIN
+		UPDATE Usuarios
+		SET
+			Nombre = @Nombre,
+			Apellido = @Apellido,
+			Email = @Email,
+			IDRol = @IDRol,
+			Activo = @Activo
+		WHERE IDUsuarios = @IDUsuario;
+	END
+	ELSE
+	BEGIN
+		UPDATE Usuarios
+		SET
+			Nombre = @Nombre,
+			Apellido = @Apellido,
+			Email = @Email,
+			Clave = HASHBYTES('SHA2_256', @Clave),
+			IDRol = @IDRol,
+			Activo = @Activo
+		WHERE IDUsuarios = @IDUsuario;
+	END
+END
+
+
+CREATE PROCEDURE BAJAUSUARIO
+	@IDUsuario INT
 AS
 BEGIN
 	UPDATE Usuarios
-	SET
-		Nombre = @Nombre,
-		Apellido = @Apellido,
-		Email = @Email,
-		Clave = HASHBYTES('SHA2_256', CONVERT(VARCHAR(100), @Clave)), -- Se vuelve a hashear
-		IDRol = @IDRol,
-		FechaRegristro = @FechaRegristro
-	WHERE IDUsuarios = @IDUsuarios
+	SET Activo = 0
+	WHERE IDUsuarios = @IDUsuario;
 END
 
-CREATE PROCEDURE BAJAUSUARIO
-	@IDUsuario int
-AS
-	BEGIN
-	DELETE FROM Usuarios 
-	WHERE IDUsuarios = @IDUsuario
-	END;
 
