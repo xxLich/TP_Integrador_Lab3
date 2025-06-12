@@ -188,26 +188,47 @@ as
 			WHERE IDProveedor = @IDProveedor
 	END
 ---ABM USUAARIOS 
+
+CREATE PROCEDURE ALTAUSUARIO
+	@Nombre VARCHAR(50),
+	@Apellido VARCHAR(50),
+	@Email VARCHAR(255),
+	@Clave VARCHAR(100),  
+	@IDRol INT,
+	@FechaRegristro DATETIME
+AS
+BEGIN
+	INSERT INTO Usuarios (Nombre, Apellido, Email, Clave, IDRol, FechaRegristro)
+	VALUES (
+		@Nombre,
+		@Apellido,
+		@Email,
+		HASHBYTES('SHA2_256', CONVERT(VARCHAR(100), @Clave)), 
+		@IDRol,
+		@FechaRegristro
+	)
+END
+	
 CREATE PROCEDURE MODIFICACIONUSUARIO
-	@IDUsuario int,
-	@Nombre varchar(10),
-	@Apellido varchar(50),
-	@Email varchar(255),
-	@Clave varchar(8),
-	@IDRol int,
-	@FechaRegistro date
-as
-	BEGIN
-		UPDATE Usuarios
-		SET
+	@IDUsuarios INT,
+	@Nombre VARCHAR(50),
+	@Apellido VARCHAR(50),
+	@Email VARCHAR(255),
+	@Clave VARCHAR(100),
+	@IDRol INT,
+	@FechaRegristro DATETIME
+AS
+BEGIN
+	UPDATE Usuarios
+	SET
 		Nombre = @Nombre,
 		Apellido = @Apellido,
 		Email = @Email,
-		Clave = @Clave,
+		Clave = HASHBYTES('SHA2_256', CONVERT(VARCHAR(100), @Clave)), -- Se vuelve a hashear
 		IDRol = @IDRol,
-		FechaRegristro = @FechaRegistro
-		WHERE IDUsuarios = @IDUsuario
-	END;
+		FechaRegristro = @FechaRegristro
+	WHERE IDUsuarios = @IDUsuarios
+END
 
 CREATE PROCEDURE BAJAUSUARIO
 	@IDUsuario int
