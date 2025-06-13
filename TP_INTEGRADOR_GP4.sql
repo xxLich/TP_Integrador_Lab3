@@ -39,7 +39,7 @@ CREATE TABLE Venta(
 	IDCliente INT NOT NULL,
 	FechaVenta DATETIME NOT NULL,
 	Total decimal(10,2) NOT NULL, 
-	Estado varchar(10),
+	Estado BIT NOT NULL,
 
 	FOREIGN KEY(IDUsuarios) REFERENCES Usuarios(IDUsuarios),
 	FOREIGN KEY(IDCliente) REFERENCES Cliente(IDCliente)
@@ -163,8 +163,8 @@ INSERT INTO DetalleIngreso (IDIngreso, IDComponente, Cantidad, PrecioUnitario) V
 
 -- Insertar Ventas
 INSERT INTO Venta (IDUsuarios, IDCliente, FechaVenta, Total, Estado) VALUES
-(2, 1, GETDATE(), 20000.00, 'Confirmado'),
-(2, 2, GETDATE(), 50000.00, 'Pendiente');
+(2, 1, GETDATE(), 20000.00, 1),
+(2, 2, GETDATE(), 50000.00, 1);
 
 -- Insertar DetalleVenta
 INSERT INTO DetalleVenta (IDVenta, IDComponente, Cantidad, PrecioUnitario) VALUES
