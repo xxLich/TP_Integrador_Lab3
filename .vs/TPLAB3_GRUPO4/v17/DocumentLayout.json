@@ -1,0 +1,295 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\datos\\datosusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|solutionrelative:datos\\datosusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\negocios\\seguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|solutionrelative:negocios\\seguridad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\entidades\\detalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|solutionrelative:entidades\\detalleventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\tplab3_grupo4\\inicio\\inicio.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|solutionrelative:tplab3_grupo4\\inicio\\inicio.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|DATOS||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|c:\\users\\lisan\\documents\\github\\tp_integrador_lab3\\tplab3_grupo4\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|solutionrelative:tplab3_grupo4\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|c:\\users\\lisan\\documents\\github\\tp_integrador_lab3\\tplab3_grupo4\\inicio\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|solutionrelative:tplab3_grupo4\\inicio\\inicio.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\datos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|solutionrelative:datos\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|ENTIDADES||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Negocios||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|solutionrelative:datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\negocios\\negociousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|solutionrelative:negocios\\negociousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\entidades\\componente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|solutionrelative:entidades\\componente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|solutionrelative:entidades\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\entidades\\detalleingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|solutionrelative:entidades\\detalleingreso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\negocios\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|solutionrelative:negocios\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|c:\\users\\lisan\\documents\\github\\tp_integrador_lab3\\datos\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|c:\\users\\lisan\\documents\\github\\tp_integrador_lab3\\negocios\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{051DAD4A-52A9-4F8C-AB28-B3187CF370C1}|ENTIDADES\\ENTIDADES.csproj|c:\\users\\lisan\\documents\\github\\tp_integrador_lab3\\entidades\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|5e9a8ac2-4f34-4521-858f-4c248ba31532"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Web.config",
+              "RelativeDocumentMoniker": "TPLAB3_GRUPO4\\Web.config",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Web.config",
+              "RelativeToolTip": "TPLAB3_GRUPO4\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-13T21:37:52.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DATOS",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\DATOS.csproj",
+              "RelativeDocumentMoniker": "DATOS\\DATOS.csproj",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\DATOS.csproj",
+              "RelativeToolTip": "DATOS\\DATOS.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-13T20:37:32.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Inicio.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Inicio\\Inicio.aspx.cs",
+              "RelativeDocumentMoniker": "TPLAB3_GRUPO4\\Inicio\\Inicio.aspx.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Inicio\\Inicio.aspx.cs",
+              "RelativeToolTip": "TPLAB3_GRUPO4\\Inicio\\Inicio.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T20:21:13.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Inicio.aspx",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Inicio\\Inicio.aspx",
+              "RelativeDocumentMoniker": "TPLAB3_GRUPO4\\Inicio\\Inicio.aspx",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Inicio\\Inicio.aspx",
+              "RelativeToolTip": "TPLAB3_GRUPO4\\Inicio\\Inicio.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-13T20:20:11.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "negocioUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\negocioUsuario.cs",
+              "RelativeDocumentMoniker": "Negocios\\negocioUsuario.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\negocioUsuario.cs",
+              "RelativeToolTip": "Negocios\\negocioUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T19:57:35.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "DATOS\\AccesoDatos.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\AccesoDatos.cs",
+              "RelativeToolTip": "DATOS\\AccesoDatos.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowCwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T19:52:13.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DatosUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\DatosUsuarios.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosUsuarios.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\DatosUsuarios.cs",
+              "RelativeToolTip": "DATOS\\DatosUsuarios.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T19:47:31.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DetalleVenta.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\DetalleVenta.cs",
+              "RelativeDocumentMoniker": "ENTIDADES\\DetalleVenta.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\DetalleVenta.cs",
+              "RelativeToolTip": "ENTIDADES\\DetalleVenta.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T20:28:06.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Seguridad.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\Seguridad.cs",
+              "RelativeDocumentMoniker": "Negocios\\Seguridad.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\Seguridad.cs",
+              "RelativeToolTip": "Negocios\\Seguridad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T20:10:07.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Negocios",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\Negocios.csproj",
+              "RelativeDocumentMoniker": "Negocios\\Negocios.csproj",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\Negocios.csproj",
+              "RelativeToolTip": "Negocios\\Negocios.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-13T20:57:07.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\App.config",
+              "RelativeDocumentMoniker": "DATOS\\App.config",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\App.config",
+              "RelativeToolTip": "DATOS\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-13T21:04:33.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ENTIDADES",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\ENTIDADES.csproj",
+              "RelativeDocumentMoniker": "ENTIDADES\\ENTIDADES.csproj",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\ENTIDADES.csproj",
+              "RelativeToolTip": "ENTIDADES\\ENTIDADES.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-13T20:58:53.865Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Componente.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\Componente.cs",
+              "RelativeDocumentMoniker": "ENTIDADES\\Componente.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\Componente.cs",
+              "RelativeToolTip": "ENTIDADES\\Componente.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T20:27:27.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DetalleIngreso.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\DetalleIngreso.cs",
+              "RelativeDocumentMoniker": "ENTIDADES\\DetalleIngreso.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\DetalleIngreso.cs",
+              "RelativeToolTip": "ENTIDADES\\DetalleIngreso.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T20:27:57.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\Usuario.cs",
+              "RelativeDocumentMoniker": "ENTIDADES\\Usuario.cs",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\ENTIDADES\\Usuario.cs",
+              "RelativeToolTip": "ENTIDADES\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T19:52:59.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\App.config",
+              "RelativeDocumentMoniker": "Negocios\\App.config",
+              "ToolTip": "C:\\Users\\lisan\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\App.config",
+              "RelativeToolTip": "Negocios\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-13T19:40:43.332Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

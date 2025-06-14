@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENTIDADES
 {
-    class Componente
+  public  class Componente
     {
 
 		private string _Nombre;
@@ -29,5 +29,5 @@ namespace ENTIDADES
 
 
 
-    }
-}
+   }
+

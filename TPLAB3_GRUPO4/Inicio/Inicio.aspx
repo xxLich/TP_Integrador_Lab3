@@ -72,7 +72,7 @@
             <h2>Inicio de Sesión</h2>
             <asp:TextBox ID="txtUsuario" runat="server" placeholder="Usuario"></asp:TextBox>
             <asp:TextBox ID="txtContra" runat="server" TextMode="Password" placeholder="Contraseña"></asp:TextBox>
-            <asp:Button ID="BtnLogin" runat="server" Text="Ingresar" CssClass="asp-button" />
+            <asp:Button ID="BtnLogin" runat="server" Text="Ingresar" CssClass="asp-button" OnClick="BtnLogin_Click" />
         </div>
     </form>
 </body>

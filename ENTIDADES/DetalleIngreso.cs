@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ENTIDADES
 {
-    class DetalleIngreso
+   public class DetalleIngreso
     {
 
         private int _NumIngreso;

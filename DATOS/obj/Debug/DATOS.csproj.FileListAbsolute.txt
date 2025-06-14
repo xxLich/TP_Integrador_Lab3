@@ -1,0 +1,11 @@
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\bin\Debug\DATOS.dll.config
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\bin\Debug\DATOS.dll
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\bin\Debug\DATOS.pdb
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\bin\Debug\ENTIDADES.dll
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\bin\Debug\ENTIDADES.pdb
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\bin\Debug\ENTIDADES.dll.config
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.csproj.AssemblyReference.cache
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.csproj.Up2Date
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.dll
+C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.pdb
