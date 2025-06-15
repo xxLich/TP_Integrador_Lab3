@@ -39,7 +39,7 @@ namespace DATOS
                     cmd.Parameters.AddWithValue("@PrecioCosto", componente.PrecioCosto);
                     cmd.Parameters.AddWithValue("@Stock", componente.Stock);
                     cmd.Parameters.AddWithValue("@FechaCreacion", componente.FechaCreacion);
-                    cmd.Parameters.AddWithValue("Estado", 1);
+                    cmd.Parameters.AddWithValue("Activo", 1);
 
                     // Ejecutar el comando
                     int filasAfectadas = cmd.ExecuteNonQuery();

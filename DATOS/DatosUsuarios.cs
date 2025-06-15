@@ -1,7 +1,8 @@
-﻿using System;
+﻿using ENTIDADES;
+using System;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
-using ENTIDADES;
 
 namespace DATOS
 {
@@ -18,7 +19,7 @@ namespace DATOS
             connectionString = setting.ConnectionString;
         }
 
-        public Usuario ObtenerUsuarioPorEmailYClave(string email, string clave)
+        public Usuario ObtenerUsuarioPorEmailYClave(string email, byte[] clave)
         {
             Usuario usuario = null;
 
@@ -28,7 +29,7 @@ namespace DATOS
 
                 SqlCommand cmd = new SqlCommand(query, cn);
                 cmd.Parameters.AddWithValue("@Email", email);
-                cmd.Parameters.AddWithValue("@Clave", clave); // Considera encriptar o hashear la clave si es necesario
+                cmd.Parameters.Add("@Clave", SqlDbType.VarBinary, 64).Value = clave;
 
                 cn.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -40,9 +41,9 @@ namespace DATOS
                         Nombre = reader["Nombre"].ToString(),
                         Apellido = reader["Apellido"].ToString(),
                         Email = reader["Email"].ToString(),
-                        Clave = reader["Clave"].ToString(),
-                        Rol = Convert.ToInt32(reader["Rol"]),
-                        FechaRegistro = Convert.ToDateTime(reader["FechaRegistro"]),
+                        Clave = Convert.ToBase64String((byte[])reader["Clave"]), // opcional
+                        Rol = Convert.ToInt32(reader["IDRol"]),
+                        FechaRegistro = Convert.ToDateTime(reader["FechaRegristro"]),
                         Activo = Convert.ToBoolean(reader["Activo"])
                     };
                 }

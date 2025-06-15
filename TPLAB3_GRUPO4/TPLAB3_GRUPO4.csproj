@@ -86,10 +86,12 @@
     <Content Include="Usuarios\Admisnistrador\AltaEmpleado.aspx" />
     <Content Include="Usuarios\Admisnistrador\BAJAComponente.aspx" />
     <Content Include="Usuarios\Admisnistrador\BajaEmpleado.aspx" />
+    <Content Include="Usuarios\Admisnistrador\inicioAdmin.aspx" />
     <Content Include="Usuarios\Admisnistrador\MODComponente.aspx" />
     <Content Include="Usuarios\Admisnistrador\ModEmpleado.aspx" />
     <Content Include="Usuarios\Empleado\CargaIngreso.aspx" />
     <Content Include="Usuarios\Empleado\CargaVenta.aspx" />
+    <Content Include="Usuarios\Empleado\inicioEmpleado.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +138,13 @@
     <Compile Include="Usuarios\Admisnistrador\BajaEmpleado.aspx.designer.cs">
       <DependentUpon>BajaEmpleado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\Admisnistrador\inicioAdmin.aspx.cs">
+      <DependentUpon>inicioAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Admisnistrador\inicioAdmin.aspx.designer.cs">
+      <DependentUpon>inicioAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios\Admisnistrador\MODComponente.aspx.cs">
       <DependentUpon>MODComponente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -163,6 +172,13 @@
     </Compile>
     <Compile Include="Usuarios\Empleado\CargaVenta.aspx.designer.cs">
       <DependentUpon>CargaVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Empleado\inicioEmpleado.aspx.cs">
+      <DependentUpon>inicioEmpleado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Empleado\inicioEmpleado.aspx.designer.cs">
+      <DependentUpon>inicioEmpleado.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

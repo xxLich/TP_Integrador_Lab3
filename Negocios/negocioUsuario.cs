@@ -1,10 +1,11 @@
-﻿using ENTIDADES;
+﻿using DATOS;
+using ENTIDADES;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using DATOS;
 
 namespace Negocios
 {
@@ -12,11 +13,10 @@ namespace Negocios
     {
         DatosUsuarios datosUsuarios = new DatosUsuarios();
 
-        public Usuario LoginUsuario(string email, string clave)
+        public Usuario LoginUsuario(string email, byte[] claveHasheada)
         {
-            string claveHasheada = Seguridad.CalcularSHA256(clave);
-            return datosUsuarios.ObtenerUsuarioPorEmailYClave(email, claveHasheada);
-
+            DatosUsuarios datos = new DatosUsuarios();
+            return datos.ObtenerUsuarioPorEmailYClave(email, claveHasheada);
         }
     }
 }

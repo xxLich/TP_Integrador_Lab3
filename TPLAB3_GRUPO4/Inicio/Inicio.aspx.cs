@@ -22,14 +22,27 @@ namespace TPLAB3_GRUPO4.Inicio
             string email = txtUsuario.Text.Trim();
             string clave = txtContra.Text.Trim();
 
-            negocioUsuario negocio = new negocioUsuario();  // Instanciás la clase
+            byte[] claveHasheada = Seguridad.CalcularSHA256Bytes(clave);
 
-            Usuario usuario = negocio.LoginUsuario(email, clave);  // Llamás al método en la instancia
+            negocioUsuario negocio = new negocioUsuario();
+            Usuario usuario = negocio.LoginUsuario(email, claveHasheada);
 
             if (usuario != null)
             {
                 Session["UsuarioLogueado"] = usuario;
-                Response.Redirect("~/Inicio/Panel.aspx");
+
+                if (usuario.Rol == 1)
+                {
+                    Response.Redirect("~/Usuarios/Admisnistrador/inicioAdmin.aspx");
+                }
+                else if (usuario.Rol == 2)
+                {
+                    Response.Redirect("~/Inicio/CargaIngreso.aspx");
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Rol no reconocido.');", true);
+                }
             }
             else
             {
