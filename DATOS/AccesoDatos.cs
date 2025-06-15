@@ -26,6 +26,19 @@ namespace DATOS
             }
         }
 
+        public int EjecutarProcedimientoAlmacenado(SqlCommand cmd, string sp)
+        {
+            int FilasCambiadas;
+            SqlConnection Conexion = ObtenerConexion();
+            SqlCommand _cmd = cmd;
+            _cmd.Connection = Conexion;
+            _cmd.CommandType = CommandType.StoredProcedure;
+            _cmd.CommandText = sp;
+            FilasCambiadas = _cmd.ExecuteNonQuery();
+            Conexion.Close();
+            return FilasCambiadas;
+        }
+
         public SqlDataAdapter ObtenerAdaptador(string consulta, SqlConnection cn)
         {
             try
@@ -52,4 +65,7 @@ namespace DATOS
             }
         }
     }
+
+
+
 }
