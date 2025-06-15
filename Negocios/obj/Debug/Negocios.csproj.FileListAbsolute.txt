@@ -12,3 +12,17 @@ C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.c
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.csproj.Up2Date
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.dll
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\Negocios.dll.config
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\Negocios.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\DATOS.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\ENTIDADES.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\DATOS.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\DATOS.dll.config
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\ENTIDADES.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\bin\Debug\ENTIDADES.dll.config
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\Negocios\obj\Debug\Negocios.pdb

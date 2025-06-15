@@ -9,3 +9,14 @@ C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.csproj.
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.csproj.Up2Date
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.dll
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\bin\Debug\DATOS.dll.config
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\bin\Debug\DATOS.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\bin\Debug\DATOS.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\bin\Debug\ENTIDADES.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\bin\Debug\ENTIDADES.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\bin\Debug\ENTIDADES.dll.config
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.csproj.CopyComplete
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\DATOS\obj\Debug\DATOS.pdb

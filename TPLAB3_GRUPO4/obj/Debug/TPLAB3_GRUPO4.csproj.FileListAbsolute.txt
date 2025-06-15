@@ -147,3 +147,12 @@ C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\TPLAB3_GRUPO4\obj\Debug\TPLAB
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\TPLAB3_GRUPO4\obj\Debug\TPLAB3_G.32400DA6.Up2Date
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\TPLAB3_GRUPO4\obj\Debug\TPLAB3_GRUPO4.dll
 C:\Users\lisan\Documents\GitHub\TP_Integrador_Lab3\TPLAB3_GRUPO4\obj\Debug\TPLAB3_GRUPO4.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\DATOS.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\ENTIDADES.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\Negocios.dll
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\DATOS.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\DATOS.dll.config
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\ENTIDADES.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\ENTIDADES.dll.config
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\Negocios.pdb
+C:\Users\Usuario\Desktop\TP_Integrador_Lab3\TPLAB3_GRUPO4\bin\Negocios.dll.config
