@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ALTAComponente.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Admisnistrador.ALTAComponente" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ALTAComponente.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Admisnistrador.ALTAComponente" %>
 
 <!DOCTYPE html>
 
@@ -50,7 +50,7 @@
         </div>
 
         <!-- Botón -->
-        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" />
+        <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
     </form>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
