@@ -1,0 +1,12 @@
+.vs/TPLAB3_GRUPO4/FileContentIndex/0e695e83-df52-41f3-8449-ccff6d740064.vsidx
+.vs/TPLAB3_GRUPO4/CopilotIndices/17.14.670.39694/SemanticSymbols.db
+.vs/TPLAB3_GRUPO4/CopilotIndices/17.14.670.39694/CodeChunks.db
+
+# Ignorar archivos y carpetas de Visual Studio
+.vs/
+.vs/* 
+.vsconfig
+
+# Ignorar archivos de Copilot y demás archivos temporales
+.vs/TPLAB3_GRUPO4/FileContentIndex/
+.vs/TPLAB3_GRUPO4/CopilotIndices/
