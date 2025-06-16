@@ -72,6 +72,52 @@ EXEC Registrar_Ingreso_De_Stock
 	@Detalles = @DetalleStock;
 
 	*/
+--------------- REGISTRAR VENTA STOCK
+-- Tipo tabla para detalles de venta
+CREATE TYPE TipoDetalleVenta AS TABLE
+(
+    IDComponente INT,
+    Cantidad INT,
+    PrecioUnitario DECIMAL(10,2)
+);
+GO
+
+-- Procedimiento almacenado para registrar venta
+CREATE PROCEDURE Registrar_Venta_Stock
+    @Usuario INT,
+    @Cliente INT,
+    @fecha DATE,
+    @total DECIMAL(10,2),
+    @Detalles TipoDetalleVenta READONLY
+AS
+BEGIN
+    SET NOCOUNT ON;
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        INSERT INTO Venta(IDUsuarios, FechaVenta, Total, Estado, IDCliente)
+        VALUES(@Usuario, @fecha, @Cliente, @total, 1);
+
+        DECLARE @IDVenta INT = SCOPE_IDENTITY();
+
+        INSERT INTO DetalleVenta(IDVenta, IDComponente, Cantidad, PrecioUnitario)
+        SELECT @IDVenta, IDComponente, Cantidad, PrecioUnitario
+        FROM @Detalles;
+
+        -- Actualizar stock (restar cantidad vendida)
+        UPDATE C
+        SET C.Stock = C.Stock - D.Cantidad
+        FROM Componentes C
+        INNER JOIN @Detalles D ON C.IDComponente = D.IDComponente;
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRANSACTION;
+        THROW;
+    END CATCH
+END;
+GO
 ----------------------------COMPONENTES
 CREATE PROCEDURE ALTACOMPONENTES 
 	@Nombre varchar(50),
