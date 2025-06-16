@@ -47,13 +47,19 @@
         <div class="mb-3">
             <label for="txtStock" class="form-label">Stock inicial</label>
             <asp:TextBox ID="txtStock" runat="server" TextMode="Number" CssClass="form-control" placeholder="Stock inicial" required="true"></asp:TextBox>
+            <br />
+            Fecha Creación<asp:TextBox ID="txtFecha" runat="server" CssClass="form-control" TextMode="Date" />
         </div>
 
         <!-- Botón -->
         <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
-    </form>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+        <p>
+            <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+        </p>
+    </form>
+     
 </body>
 
 </html>

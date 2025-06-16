@@ -16,6 +16,7 @@ namespace ENTIDADES
 		private decimal _PrecioCosto;
 		private int _Stock;
 		private DateTime _FechaCreacion;
+        private int _Estado;
        
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Descripcion { get => _Descripcion; set => _Descripcion = value; }
@@ -24,7 +25,8 @@ namespace ENTIDADES
         public decimal PrecioCosto { get => _PrecioCosto; set => _PrecioCosto = value; }
         public int Stock { get => _Stock; set => _Stock = value; }
         public DateTime FechaCreacion { get => _FechaCreacion; set => _FechaCreacion = value; }
-      }
+        public int Estado { get => _Estado; set => _Estado = value; }
+    }
 
 
 

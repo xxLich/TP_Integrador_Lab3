@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DATOS
 {
-    class DatosComponentes
+    public class DatosComponentes
     {
 
         readonly AccesoDatos ad = new AccesoDatos();
@@ -39,7 +39,7 @@ namespace DATOS
                     cmd.Parameters.AddWithValue("@PrecioCosto", componente.PrecioCosto);
                     cmd.Parameters.AddWithValue("@Stock", componente.Stock);
                     cmd.Parameters.AddWithValue("@FechaCreacion", componente.FechaCreacion);
-                    cmd.Parameters.AddWithValue("Activo", 1);
+                    cmd.Parameters.AddWithValue("Estado", componente.Estado);
 
                     // Ejecutar el comando
                     int filasAfectadas = cmd.ExecuteNonQuery();
