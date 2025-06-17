@@ -19,7 +19,7 @@ namespace ENTIDADES
 
 
         public int NumIngreso { get => _NumIngreso; set => _NumIngreso = value; }
-        public int IDComponente { get => _Componente; set => _Componente = value; }
+        public int Componente { get => _Componente; set => _Componente = value; }
         public int Cantidad { get => _Cantidad; set => _Cantidad = value; }
         public decimal PrecioUnitario { get => _PrecioUnitario; set => _PrecioUnitario = value; }
         
