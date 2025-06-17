@@ -23,5 +23,10 @@ namespace TPLAB3_GRUPO4.Usuarios.Empleado
         {
             Response.Redirect("~/Usuarios/Empleado/CargaVenta.aspx"); // Cambiá la ruta si es necesario
         }
+
+        protected void btnCargarCliente_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Usuarios/Empleado/CargaClientes.aspx");
+        }
     }
 }

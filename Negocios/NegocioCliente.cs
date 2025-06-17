@@ -1,4 +1,5 @@
 ﻿using DATOS;
+using ENTIDADES;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -17,6 +18,9 @@ namespace Negocios
             return dv.ObtenerClientes();
         }
 
-
+        public void AgregarCliente(Clientes cliente)
+        {
+            dv.AgregarCliente(cliente);
+        }
     }
 }

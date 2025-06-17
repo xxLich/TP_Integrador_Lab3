@@ -16,81 +16,74 @@ namespace TPLAB3_GRUPO4.Usuarios.Empleado
         NegocioVentas negocioVenta = new NegocioVentas();
         NegocioComponente negocioComponente = new NegocioComponente();
         NegocioCliente negocioCliente = new NegocioCliente();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                CargarProductos();
-                CargarClientes();
+                ddlProducto.DataSource = negocioComponente.ObtenerComponentes();
+                ddlProducto.DataTextField = "Nombre";
+                ddlProducto.DataValueField = "IDComponente";
+                ddlProducto.DataBind();
+                ddlProducto.Items.Insert(0, new ListItem("-- Seleccione Producto --", ""));
+
+                ddlCliente.DataSource = negocioCliente.ObtenerClientes();
+                ddlCliente.DataTextField = "Nombre";
+                ddlCliente.DataValueField = "IDCliente";
+                ddlCliente.DataBind();
+                ddlCliente.Items.Insert(0, new ListItem("-- Seleccione Cliente --", ""));
             }
         }
-        private void CargarProductos()
-        {
-            ddlProducto.DataSource = negocioComponente.ObtenerComponentes();
-            ddlProducto.DataTextField = "Nombre";
-            ddlProducto.DataValueField = "IDComponente";
-            ddlProducto.DataBind();
-            ddlProducto.Items.Insert(0, new ListItem("-- Seleccione Producto --", "0"));
-        }
 
-        private void CargarClientes()
+        protected void ddlProducto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ddlCliente.DataSource = negocioCliente.ObtenerClientes();
-            ddlCliente.DataTextField = "Nombre";
-            ddlCliente.DataValueField = "IDCliente";
-            ddlCliente.DataBind();
-            ddlCliente.Items.Insert(0, new ListItem("-- Seleccione Cliente --", "0"));
+            int idComponente = int.Parse(ddlProducto.SelectedValue);
+            DataTable dt = negocioComponente.ObtenerComponentePorID(idComponente);
+
+            if (dt.Rows.Count > 0)
+            {
+                decimal precio = Convert.ToDecimal(dt.Rows[0]["PrecioVenta"]);
+                txtPrecio.Text = precio.ToString("0.00");
+            }
         }
 
         protected void btnRegistrarVenta_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Venta venta = new Venta
-                {
-                    ClienteID = int.Parse(ddlCliente.SelectedValue),
-                    Usuario = 2, // Reemplazar con el ID real del usuario logueado
-                    FechaVenta = DateTime.Now,
-                    Total = decimal.Parse(txtCantidad.Text) * decimal.Parse(txtPrecio.Text),
-                    Estado = "1"
-                };
+            int cantidad = int.Parse(txtCantidad.Text);
+            decimal precio = decimal.Parse(txtPrecio.Text);
 
-                var detalle = new DetalleVenta
+            Venta venta = new Venta
+            {
+                ClienteID = int.Parse(ddlCliente.SelectedValue),
+                Usuario = 2,
+                FechaVenta = DateTime.Now,
+                Total = cantidad * precio,
+                Estado = "1",
+                Detalles = new List<DetalleVenta>
+            {
+                new DetalleVenta
                 {
                     Componente = int.Parse(ddlProducto.SelectedValue),
-                    Cantidad = int.Parse(txtCantidad.Text),
-                    PrecioUnitario = decimal.Parse(txtPrecio.Text)
-                };
-
-                venta.Detalles = new List<DetalleVenta> { detalle };
-
-                // Guardar en la BDD
-                negocioVenta.RegistrarVenta(venta);
-
-                // Mostrar lo que se guardó
-                DataTable dt = new DataTable();
-                dt.Columns.Add("Componente");
-                dt.Columns.Add("Cantidad");
-                dt.Columns.Add("PrecioUnitario");
-                dt.Columns.Add("Total");
-
-                DataRow row = dt.NewRow();
-                row["Componente"] = ddlProducto.SelectedItem.Text;
-                row["Cantidad"] = detalle.Cantidad;
-                row["PrecioUnitario"] = detalle.PrecioUnitario;
-                row["Total"] = venta.Total;
-                dt.Rows.Add(row);
-
-                gvUltimaVenta.DataSource = dt;
-                gvUltimaVenta.DataBind();
-
-                Response.Write("<script>alert('Venta registrada correctamente');</script>");
+                    Cantidad = cantidad,
+                    PrecioUnitario = precio
+                }
             }
-            catch (Exception ex)
+            };
+
+            negocioVenta.RegistrarVenta(venta);
+
+            gvUltimaVenta.DataSource = new[]
             {
-                Response.Write("<script>alert('Error al registrar la venta: " + ex.Message + "');</script>");
+            new
+            {
+                Componente = ddlProducto.SelectedItem.Text,
+                Cantidad = cantidad,
+                PrecioUnitario = precio,
+                Total = venta.Total
             }
-
+        };
+            gvUltimaVenta.DataBind();
         }
     }
-    }
+}
+    

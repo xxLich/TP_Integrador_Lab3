@@ -72,6 +72,20 @@ namespace DATOS
         return null;
     }
 }
+        public DataTable ObtenerComponentePorID(int id)
+        {
+            using (SqlConnection conexion = ad.ObtenerConexion())
+            {
+                string query = "SELECT PrecioVenta FROM Componentes WHERE IDComponente = @id";
+                SqlCommand cmd = new SqlCommand(query, conexion); 
+                cmd.Parameters.AddWithValue("@id", id);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
 
     }
 }

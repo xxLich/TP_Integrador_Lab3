@@ -40,6 +40,10 @@
             <asp:Button ID="btnRegistrarIngreso" runat="server" Text="Registrar Ingreso" CssClass="btn btn-success" OnClick="btnRegistrarIngreso_Click" />
         </div>
 
+        <asp:Label ID="lblMensajeIngreso" runat="server" />
+
+
+
         <!-- Tabla para mostrar los detalles -->
         <h3>Detalles de Ingreso</h3>
         <asp:GridView ID="gvDetalles" runat="server" AutoGenerateColumns="true" CssClass="table table-striped" />

@@ -17,7 +17,11 @@
                 CssClass="btn btn-primary me-3" OnClick="btnCargaIngreso_Click" />
 
             <asp:Button ID="btnVenta" runat="server" Text="Realizar Venta"
-                CssClass="btn btn-success" OnClick="btnVenta_Click" />
+                CssClass="btn btn-success me-3" OnClick="btnVenta_Click" />
+
+          
+            <asp:Button ID="btnCargarCliente" runat="server" Text="Cargar Cliente"
+                CssClass="btn btn-warning" OnClick="btnCargarCliente_Click" />
         </div>
     </form>
 </body>
