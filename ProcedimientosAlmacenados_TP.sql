@@ -300,5 +300,44 @@ BEGIN
 	SET Activo = 0
 	WHERE IDUsuarios = @IDUsuario;
 END
+	-- Clientes --
+CREATE PROCEDURE ALTACLIENTE
+	@Nombre VARCHAR(50),
+	@Domicilio VARCHAR(100),
+	@Telefono VARCHAR(20),
+	@DNI INT
+AS
+BEGIN
+	INSERT INTO Cliente (Nombre, Domicilio, Telefono, DNI)
+	VALUES (@Nombre, @Domicilio, @Telefono, @DNI);
+END;
+GO
+
+CREATE PROCEDURE BAJACLIENTE
+	@IDCliente INT
+AS
+BEGIN
+	DELETE FROM Cliente
+	WHERE IDCliente = @IDCliente;
+END;
+GO
+
+CREATE PROCEDURE MODIFICACIONCLIENTE
+	@IDCliente INT,
+	@Nombre VARCHAR(50),
+	@Domicilio VARCHAR(100),
+	@Telefono VARCHAR(20),
+	@DNI INT
+AS
+BEGIN
+	UPDATE Cliente
+	SET 
+		Nombre = @Nombre,
+		Domicilio = @Domicilio,
+		Telefono = @Telefono,
+		DNI = @DNI
+	WHERE IDCliente = @IDCliente;
+END;
+GO
 
 
