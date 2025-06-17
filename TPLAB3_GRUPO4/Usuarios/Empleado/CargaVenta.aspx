@@ -1,12 +1,12 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CargaVenta.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Empleado.CargaVenta" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CargaVenta.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Empleado.CargaVenta" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Registrar Venta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server" class="container mt-5">
@@ -33,7 +33,7 @@
         <!-- Precio unitario -->
         <div class="mb-3">
             <label for="txtPrecio" class="form-label">Precio Unitario</label>
-            <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" TextMode="Number" step="0.01" required />
+            <asp:TextBox ID="txtPrecio" runat="server" CssClass="form-control" TextMode="Number" required />
         </div>
 
         <!-- Fecha -->
@@ -43,8 +43,11 @@
         </div>
 
         <!-- Botón -->
-        <asp:Button ID="btnRegistrarVenta" runat="server" Text="Registrar Venta" CssClass="btn btn-success" O />
+      <asp:Button ID="btnRegistrarVenta" runat="server" Text="Registrar Venta" OnClick="btnRegistrarVenta_Click" />
+       <asp:GridView ID="gvUltimaVenta" runat="server" AutoGenerateColumns="true" CssClass="table" />
+    
     </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </html>

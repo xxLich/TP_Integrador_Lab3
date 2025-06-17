@@ -49,7 +49,10 @@
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="DatosCategoria.cs" />
+    <Compile Include="DatosCliente.cs" />
     <Compile Include="DatosComponentes.cs" />
+    <Compile Include="DatosIngresos.cs" />
+    <Compile Include="DatosVentas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DatosUsuarios.cs" />
   </ItemGroup>

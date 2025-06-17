@@ -52,6 +52,27 @@ namespace DATOS
                 return false;
             }
         }
+
+      public DataTable ObtenerComponentes()
+{
+    try
+    {
+        using (SqlConnection conexion = ad.ObtenerConexion())
+        {
+                    string consulta = "SELECT IDComponente, Nombre FROM Componentes WHERE Estado = 1";
+                    SqlDataAdapter da = new SqlDataAdapter(consulta, conexion);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("Error al obtener los componentes: " + ex.Message);
+        return null;
+    }
+}
+
     }
 }
 

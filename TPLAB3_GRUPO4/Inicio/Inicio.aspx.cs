@@ -37,7 +37,7 @@ namespace TPLAB3_GRUPO4.Inicio
                 }
                 else if (usuario.Rol == 2)
                 {
-                    Response.Redirect("~/Inicio/CargaIngreso.aspx");
+                    Response.Redirect("~/Usuarios/Empleado/inicioEmpleado.aspx");
                 }
                 else
                 {

@@ -19,8 +19,10 @@ namespace Negocios
             return datosC.Agregar_Componente(componente);
 
         }
-
-
+        public DataTable ObtenerComponentes()
+        {
+            return datosC.ObtenerComponentes();
+        }
 
     }
 }
