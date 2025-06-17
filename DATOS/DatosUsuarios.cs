@@ -51,5 +51,43 @@ namespace DATOS
 
             return usuario;
         }
+
+        public bool Agregar_Empleado(Usuario usuario)
+        {
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(connectionString))
+                {
+                    if (conexion == null) throw new Exception("No se pudo establecer la conexión con la base de datos.");
+
+                    SqlCommand cmd = new SqlCommand("ALTAUSUARIO", conexion)
+                    {
+                        CommandType = CommandType.StoredProcedure
+                    };
+
+                    // Agregar parámetros del procedimiento almacenado
+                    cmd.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", usuario.Apellido);
+                    cmd.Parameters.AddWithValue("@Email", usuario.Email);
+                    cmd.Parameters.AddWithValue("@Clave", usuario.Clave);
+                    cmd.Parameters.AddWithValue("@IDRol", usuario.Rol);
+
+
+                    conexion.Open();
+                    // Ejecutar el comando
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al agregar el Usuario: " + ex.Message);
+                return false;
+            }
+        }
+
+
+
+
     }
 }

@@ -18,5 +18,18 @@ namespace Negocios
             DatosUsuarios datos = new DatosUsuarios();
             return datos.ObtenerUsuarioPorEmailYClave(email, claveHasheada);
         }
+
+       
+        public bool agregarEmpleado(Usuario usuario)
+        {
+            return datosUsuarios.Agregar_Empleado(usuario);
+           
+        }
+
+
+
+
+
+
     }
 }

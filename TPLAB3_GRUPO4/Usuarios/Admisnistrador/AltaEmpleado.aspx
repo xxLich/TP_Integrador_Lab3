@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaEmpleado.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Admisnistrador.AltaEmpleado" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AltaEmpleado.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Admisnistrador.AltaEmpleado" %>
 
 <!DOCTYPE html>
 
@@ -40,6 +40,11 @@
         <div class="mb-3">
             <label for="txtFechaIngreso" class="form-label">Fecha de Ingreso</label>
             <asp:TextBox ID="txtFechaIngreso" runat="server" CssClass="form-control" TextMode="Date" required="true"></asp:TextBox>
+            </div>
+        <!-- Clave -->
+        <div class="mb-3">
+            <label for="txtClave" class="form-label">Clave</label>
+            <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" placeholder="Contraseña" required="true" TextMode="Password"></asp:TextBox>
         </div>
 
         <!-- Cargo -->
@@ -47,16 +52,18 @@
             <label for="ddlCargo" class="form-label">Cargo</label>
             <asp:DropDownList ID="ddlCargo" runat="server" CssClass="form-select" required="true">
                 <asp:ListItem Text="Seleccione un cargo" Value="" />
-                <asp:ListItem Text="Administrativo" Value="Administrativo" />
+                <asp:ListItem Text="Administrativo" Value="1" />
            
-                <asp:ListItem Text="Gerente" Value="Gerente" />
+                <asp:ListItem Text="Empleado" Value="2" />
             </asp:DropDownList>
         </div>
 
         <!-- Botón Guardar -->
-        <asp:Button ID="btnGuardarEmpleado" runat="server" Text="Guardar Empleado" CssClass="btn btn-success"  />
-    </form>
+        <asp:Button ID="btnGuardarEmpleado" runat="server" Text="Guardar Empleado" CssClass="btn btn-success" OnClick="btnGuardarEmpleado_Click1"  />
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        <br />
+        <asp:Label ID="lblMensaje" runat="server"></asp:Label>
+    </form>
+      </body>
 
 </html>
