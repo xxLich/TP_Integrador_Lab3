@@ -133,7 +133,7 @@ BEGIN
 	INSERT INTO Componentes(Nombre, Descripcion, IDCategoria, PrecioVenta, PrecioCosto, Stock, FechaCreacion, Estado)
 	VALUES (@Nombre, @Descripcion, @IDCategoria, @PrecioVenta, @PrecioCosto, @Stock, @FechaCreacion, @Estado)
 END
-
+GO
 
 
 CREATE PROCEDURE BAJACOMPONENTES
@@ -142,7 +142,7 @@ AS
 BEGIN
 	DELETE FROM Componentes WHERE IDComponente = @IDComponente
 END
-
+GO
 
 CREATE PROCEDURE MODIFICACIONCOMPONENTES
 	@IDComponente int,
@@ -167,7 +167,7 @@ AS
 		Estado = @Estado
 	WHERE IDComponente = @IDComponente
 END
-
+GO
 
 
 --- CATEGORIA
@@ -180,7 +180,7 @@ AS
 		INSERT INTO Categoria (Nombre,Descripcion)
 		VALUES (@Nombre,@Descripcion)
 		END;
-
+GO
 CREATE PROCEDURE BAJACATEGORIA
 	@IDCategoria INT
 AS
@@ -188,7 +188,7 @@ AS
 		DELETE FROM Categoria
 			WHERE IDCategoria = @IDCategoria
 	END;
-
+	GO
 CREATE PROCEDURE MODIFICACIONCATEGORIA
 	@IDCategoria int,
 	@Nombre varchar(10),
@@ -202,7 +202,7 @@ AS
 			WHERE IDCategoria = @IDCategoria
 	END;
 	
-
+	GO
 ---PROVEEDOR
 CREATE PROCEDURE ALTAPROVEEDOR
 	@Nombre varchar(50),
@@ -212,7 +212,7 @@ as
 		INSERT INTO Proveedor(Nombre,Descripcion)
 		VALUES (@Nombre,@Descripcion)
 	END
-
+	GO
 CREATE PROCEDURE BAJAPROVEEDOR
 	@IDProveedor int
 as
@@ -220,7 +220,7 @@ as
 		DELETE FROM Proveedor
 		WHERE IDProveedor = @IDProveedor
 	end;
-
+	GO
 CREATE PROCEDURE MODIFICACIONPROVEEDOR
 	@IDProveedor int,
 	@Nombre varchar(10),
@@ -234,7 +234,7 @@ as
 			WHERE IDProveedor = @IDProveedor
 	END
 ---ABM USUAARIOS 
-
+GO
 CREATE PROCEDURE ALTAUSUARIO
 	@Nombre VARCHAR(50),
 	@Apellido VARCHAR(50),
@@ -255,7 +255,7 @@ BEGIN
 	);
 END
 
-	
+	GO
 CREATE PROCEDURE MODIFICACIONUSUARIO
 	@IDUsuario INT,
 	@Nombre VARCHAR(50),
@@ -290,7 +290,7 @@ BEGIN
 		WHERE IDUsuarios = @IDUsuario;
 	END
 END
-
+GO
 
 CREATE PROCEDURE BAJAUSUARIO
 	@IDUsuario INT
@@ -301,6 +301,7 @@ BEGIN
 	WHERE IDUsuarios = @IDUsuario;
 END
 	-- Clientes --
+	GO
 CREATE PROCEDURE ALTACLIENTE
 	@Nombre VARCHAR(50),
 	@Domicilio VARCHAR(100),
@@ -339,5 +340,3 @@ BEGIN
 	WHERE IDCliente = @IDCliente;
 END;
 GO
-
-
