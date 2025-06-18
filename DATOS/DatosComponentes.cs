@@ -73,6 +73,39 @@ namespace DATOS
     }
 }
 
+        public DataTable FiltrarComponentes(int IDComponente)
+        {
+            
+            string consulta = @"
+         SELECT C.IDComponente,C.Nombre
+             FROM  Componentes AS C
+            
+             WHERE C.IDComponente = @IDComponente";
+
+            // Crear el comando SQL
+            SqlCommand cmd = new SqlCommand(consulta);
+            cmd.Parameters.AddWithValue("@IDComponente", IDComponente);
+
+            // Ejecutar la consulta y obtener la tabla
+            if (ad.ExisteRegistroConComando(cmd))
+            {
+                return ad.ObtenerTablaConComando("Componentes", cmd);
+            }
+
+            return null;
+        }
+
+        public int EliminarMedicosDatos(Componente componente)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BAJACOMPONENTES";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IDComponente", componente.IDComponente);
+
+            return ad.EjecutarProcedimientoAlmacenado(cmd, "BAJACOMPONENTES");
+        }
+
+
     }
 }
 

@@ -19,11 +19,27 @@ namespace Negocios
             return datosC.Agregar_Componente(componente);
 
         }
+        public DataTable FiltrarComponentes(int id) //
+        {
+            return datosC.FiltrarComponentes(id);
+        }
         public DataTable ObtenerComponentes()
         {
             return datosC.ObtenerComponentes();
         }
-
+        public int EliminarComponenteNegocio(int ID) //
+        {
+           componente.IDComponente = ID;
+            int estado = datosC.EliminarMedicosDatos(componente);
+            if (estado >= 1)
+            {
+                return estado;
+            }
+            else
+            {
+                return estado;
+            }
+        }
     }
 }
     

@@ -25,7 +25,31 @@ namespace DATOS
                 return null;
             }
         }
+        public DataTable ObtenerTablaConComando(string tabla, SqlCommand cmd)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection conexion = ObtenerConexion();
+            cmd.Connection = conexion;
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
+            adp.Fill(ds, tabla);
+            conexion.Close();
+            return ds.Tables[tabla];
+        }
+        public bool ExisteRegistroConComando(SqlCommand cmd)
+        {
+            bool estado = false;
+            using (SqlConnection conexion = ObtenerConexion())
+            {
+                cmd.Connection = conexion;
+                SqlDataReader datos = cmd.ExecuteReader();
+                if (datos.Read())
+                {
+                    estado = true;
+                }
+            }
 
+            return estado;
+        }
         public int EjecutarProcedimientoAlmacenado(SqlCommand cmd, string sp)
         {
             int FilasCambiadas;
