@@ -5,7 +5,10 @@ DROP TYPE IF EXISTS TipoDetalleIngreso;
 GO
 DROP PROCEDURE IF EXISTS Registrar_Ingreso_De_Stock;
 GO
--- Crear el tipo de tabla (esto solo se hace una vez)
+
+-- TIPO TABLA
+
+-- Detalles de ingreso
 CREATE TYPE TipoDetalleIngreso AS TABLE
 (
 	IDComponente INT,
@@ -14,7 +17,18 @@ CREATE TYPE TipoDetalleIngreso AS TABLE
 );
 GO
 
--- Crear el procedimiento
+-- Detalles de venta
+CREATE TYPE TipoDetalleVenta AS TABLE
+(
+    IDComponente INT,
+    Cantidad INT,
+    PrecioUnitario DECIMAL(10,2)
+);
+GO
+
+-- PROCEDIMIENTOS DE ALMACENADO
+
+-- Registrar ingreso de stock
 CREATE PROCEDURE Registrar_Ingreso_De_Stock
 	@Usuario INT,
 	@Proveedor INT,
@@ -53,36 +67,8 @@ BEGIN
 	END CATCH
 END;
 GO
-/*
-PRUEBA 
--- Declarar variable tipo tabla
-DECLARE @DetalleStock TipoDetalleIngreso;
 
--- Insertar datos
-INSERT INTO @DetalleStock (IDComponente, Cantidad, PrecioUnitario) VALUES
-(1, 5, 70000),
-(2, 10, 18000);
-
--- Ejecutar el procedimiento
-EXEC Registrar_Ingreso_De_Stock 
-	@Usuario = 2,
-	@Proveedor = 1,
-	@Fecha = '2025-06-09',  
-	@Total = 560000,
-	@Detalles = @DetalleStock;
-
-	*/
---------------- REGISTRAR VENTA STOCK
--- Tipo tabla para detalles de venta
-CREATE TYPE TipoDetalleVenta AS TABLE
-(
-    IDComponente INT,
-    Cantidad INT,
-    PrecioUnitario DECIMAL(10,2)
-);
-GO
-
--- Procedimiento almacenado para registrar venta
+-- Registrar venta
 CREATE PROCEDURE Registrar_Venta_Stock
     @Usuario INT,
     @Cliente INT,
@@ -104,7 +90,7 @@ BEGIN
         SELECT @IDVenta, IDComponente, Cantidad, PrecioUnitario
         FROM @Detalles;
 
-        -- Actualizar stock (restar cantidad vendida)
+        -- Actualizar stock
         UPDATE C
         SET C.Stock = C.Stock - D.Cantidad
         FROM Componentes C
@@ -118,7 +104,21 @@ BEGIN
     END CATCH
 END;
 GO
-----------------------------COMPONENTES
+
+-- ALTAS
+
+-- Categoría
+CREATE PROCEDURE ALTACATEGORIA
+	@Nombre varchar(50),
+	@Descripcion varchar(100)
+AS
+	BEGIN
+		INSERT INTO Categoria (Nombre,Descripcion)
+		VALUES (@Nombre,@Descripcion)
+	END;
+GO
+
+-- Componentes
 CREATE PROCEDURE ALTACOMPONENTES 
 	@Nombre varchar(50),
 	@Descripcion varchar(100),
@@ -132,18 +132,66 @@ AS
 BEGIN
 	INSERT INTO Componentes(Nombre, Descripcion, IDCategoria, PrecioVenta, PrecioCosto, Stock, FechaCreacion, Estado)
 	VALUES (@Nombre, @Descripcion, @IDCategoria, @PrecioVenta, @PrecioCosto, @Stock, @FechaCreacion, @Estado)
-END
+END;
 GO
 
+-- Proveedor
+CREATE PROCEDURE ALTAPROVEEDOR
+	@Nombre varchar(50),
+	@Descripcion varchar(100)
+AS 
+	BEGIN
+		INSERT INTO Proveedor(Nombre,Descripcion)
+		VALUES (@Nombre,@Descripcion)
+	END
+	GO
+CREATE PROCEDURE BAJAPROVEEDOR
+	@IDProveedor int
+AS
+	BEGIN
+		DELETE FROM Proveedor
+		WHERE IDProveedor = @IDProveedor
+	END;
+GO
 
-CREATE PROCEDURE BAJACOMPONENTES
-	@IDComponente INT
+-- Usuario
+CREATE PROCEDURE ALTAUSUARIO
+	@Nombre VARCHAR(50),
+	@Apellido VARCHAR(50),
+	@Email VARCHAR(255),
+	@Clave VARCHAR(100),        -- La clave en texto plano que se hashéa
+	@IDRol INT
 AS
 BEGIN
-	DELETE FROM Componentes WHERE IDComponente = @IDComponente
-END
+	INSERT INTO Usuarios (Nombre, Apellido, Email, Clave, IDRol, FechaRegristro, Activo)
+	VALUES (
+		@Nombre,
+		@Apellido,
+		@Email,
+		HASHBYTES('SHA2_256', @Clave),  -- Encripta la clave
+		@IDRol,
+		GETDATE(),
+		1 -- Activo por defecto
+	);
+END;
 GO
 
+-- Clientes
+CREATE PROCEDURE ALTACLIENTE
+	@Nombre VARCHAR(50),
+	@Domicilio VARCHAR(100),
+	@Telefono VARCHAR(20),
+	@DNI INT
+AS
+BEGIN
+	INSERT INTO Cliente (Nombre, Domicilio, Telefono, DNI)
+	VALUES (@Nombre, @Domicilio, @Telefono, @DNI);
+END;
+GO
+
+-- MODIFICACIONES
+
+-- Componentes
 CREATE PROCEDURE MODIFICACIONCOMPONENTES
 	@IDComponente int,
 	@Nombre varchar(50),
@@ -166,61 +214,25 @@ AS
 		FechaCreacion = @FechaCreacion,
 		Estado = @Estado
 	WHERE IDComponente = @IDComponente
-END
+END;
 GO
 
-
---- CATEGORIA
-
-CREATE PROCEDURE ALTACATEGORIA
-	@Nombre varchar(50),
-	@Descripcion varchar(100)
-AS
-	BEGIN
-		INSERT INTO Categoria (Nombre,Descripcion)
-		VALUES (@Nombre,@Descripcion)
-		END;
-GO
-CREATE PROCEDURE BAJACATEGORIA
-	@IDCategoria INT
-AS
-	BEGIN
-		DELETE FROM Categoria
-			WHERE IDCategoria = @IDCategoria
-	END;
-	GO
+-- Categoria
 CREATE PROCEDURE MODIFICACIONCATEGORIA
 	@IDCategoria int,
 	@Nombre varchar(10),
-	@Descrion varchar (100)
+	@Descripcion varchar (100)
 AS
 	BEGIN 
 		UPDATE Categoria
 			SET 
 			Nombre = @Nombre,
-			Descripcion = @Descrion
+			Descripcion = @Descripcion
 			WHERE IDCategoria = @IDCategoria
 	END;
-	
-	GO
----PROVEEDOR
-CREATE PROCEDURE ALTAPROVEEDOR
-	@Nombre varchar(50),
-	@Descripcion varchar(100)
-as 
-	BEGIN
-		INSERT INTO Proveedor(Nombre,Descripcion)
-		VALUES (@Nombre,@Descripcion)
-	END
-	GO
-CREATE PROCEDURE BAJAPROVEEDOR
-	@IDProveedor int
-as
-	BEGIN
-		DELETE FROM Proveedor
-		WHERE IDProveedor = @IDProveedor
-	end;
-	GO
+GO
+
+-- Proveedor
 CREATE PROCEDURE MODIFICACIONPROVEEDOR
 	@IDProveedor int,
 	@Nombre varchar(10),
@@ -235,27 +247,8 @@ as
 	END
 ---ABM USUAARIOS 
 GO
-CREATE PROCEDURE ALTAUSUARIO
-	@Nombre VARCHAR(50),
-	@Apellido VARCHAR(50),
-	@Email VARCHAR(255),
-	@Clave VARCHAR(100),        -- La clave en texto plano que se hashéa
-	@IDRol INT
-AS
-BEGIN
-	INSERT INTO Usuarios (Nombre, Apellido, Email, Clave, IDRol, FechaRegristro, Activo)
-	VALUES (
-		@Nombre,
-		@Apellido,
-		@Email,
-		HASHBYTES('SHA2_256', @Clave),  -- Encripta la clave
-		@IDRol,
-		GETDATE(),
-		1 -- Activo por defecto
-	);
-END
 
-	GO
+-- Usuario
 CREATE PROCEDURE MODIFICACIONUSUARIO
 	@IDUsuario INT,
 	@Nombre VARCHAR(50),
@@ -292,37 +285,7 @@ BEGIN
 END
 GO
 
-CREATE PROCEDURE BAJAUSUARIO
-	@IDUsuario INT
-AS
-BEGIN
-	UPDATE Usuarios
-	SET Activo = 0
-	WHERE IDUsuarios = @IDUsuario;
-END
-	-- Clientes --
-	GO
-CREATE PROCEDURE ALTACLIENTE
-	@Nombre VARCHAR(50),
-	@Domicilio VARCHAR(100),
-	@Telefono VARCHAR(20),
-	@DNI INT
-AS
-BEGIN
-	INSERT INTO Cliente (Nombre, Domicilio, Telefono, DNI)
-	VALUES (@Nombre, @Domicilio, @Telefono, @DNI);
-END;
-GO
-
-CREATE PROCEDURE BAJACLIENTE
-	@IDCliente INT
-AS
-BEGIN
-	DELETE FROM Cliente
-	WHERE IDCliente = @IDCliente;
-END;
-GO
-
+-- Clientes
 CREATE PROCEDURE MODIFICACIONCLIENTE
 	@IDCliente INT,
 	@Nombre VARCHAR(50),
@@ -338,5 +301,63 @@ BEGIN
 		Telefono = @Telefono,
 		DNI = @DNI
 	WHERE IDCliente = @IDCliente;
+END;
+GO
+
+-- BAJAS
+
+-- Categoría
+CREATE PROCEDURE BAJACATEGORIA
+	@IDCategoria INT
+AS
+	BEGIN
+		DELETE FROM Categoria
+			WHERE IDCategoria = @IDCategoria
+	END;
+GO
+
+-- Clientes
+CREATE PROCEDURE BAJACLIENTE
+	@IDCliente INT
+AS
+BEGIN
+	DELETE FROM Cliente
+	WHERE IDCliente = @IDCliente;
+END;
+GO
+
+-- Usuario
+CREATE PROCEDURE BAJAUSUARIO
+	@IDUsuario INT
+AS
+BEGIN
+	IF EXISTS (SELECT 1 FROM Usuarios WHERE IDUsuarios = @IDUsuario)
+	BEGIN
+		UPDATE Usuarios
+		SET Activo = 0
+		WHERE IDUsuarios = @IDUsuario;
+	END
+	ELSE
+	BEGIN
+		PRINT 'El usuario no existe.';
+	END
+END;
+GO
+
+-- Componentes
+CREATE PROCEDURE BAJACOMPONENTES
+	@IDComponente INT
+AS
+BEGIN
+	IF EXISTS (SELECT 1 FROM Componentes WHERE IDComponente = @IDComponente)
+	BEGIN
+		UPDATE Componentes
+		SET Estado = 0
+		WHERE IDComponente = @IDComponente;
+	END
+	ELSE
+	BEGIN
+		PRINT 'El componente no existe.';
+	END
 END;
 GO
