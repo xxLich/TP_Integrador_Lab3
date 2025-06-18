@@ -80,7 +80,7 @@ namespace DATOS
          SELECT C.IDComponente,C.Nombre
              FROM  Componentes AS C
             
-             WHERE C.IDComponente = @IDComponente";
+             WHERE C.IDComponente = @IDComponente AND C.Estado=1";
 
             // Crear el comando SQL
             SqlCommand cmd = new SqlCommand(consulta);
