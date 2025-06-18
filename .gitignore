@@ -1,0 +1,17 @@
+# Ignorar directorios de Visual Studio
+.vs/
+.vscode/
+
+# Ignorar archivos de configuración específicos de Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar archivos binarios y objetos de compilación
+bin/
+obj/
+
+# Ignorar archivos de respaldo
+*~
+*.bak
