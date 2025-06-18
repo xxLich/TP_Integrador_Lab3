@@ -9,7 +9,7 @@ namespace DATOS
     public class DatosUsuarios
     {
         private readonly string connectionString;
-
+        readonly AccesoDatos ad = new AccesoDatos();
         public DatosUsuarios()
         {
             var setting = ConfigurationManager.ConnectionStrings["TP_INTEGRADOR_GP4"];
@@ -86,8 +86,36 @@ namespace DATOS
             }
         }
 
+        public int EliminarUsuarioDatos(Usuario usuario)
+        {
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "BAJAUSUARIO";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@IDUsuario", usuario.IDUsuario);
 
+            return ad.EjecutarProcedimientoAlmacenado(cmd, "BAJAUSUARIO");
+        }
+        public DataTable FiltrarUsuarios(int IDUsuarios)
+        {
 
+            string consulta = @"
+         SELECT US.IDUsuarios,US.Nombre
+             FROM  Usuarios AS us
+            
+             WHERE US.IDUsuarios = @IDUsuarios AND US.Activo=1";
+
+            // Crear el comando SQL
+            SqlCommand cmd = new SqlCommand(consulta);
+            cmd.Parameters.AddWithValue("@IDUsuarios", IDUsuarios);
+
+            // Ejecutar la consulta y obtener la tabla
+            if (ad.ExisteRegistroConComando(cmd))
+            {
+                return ad.ObtenerTablaConComando("Usuarios", cmd);
+            }
+
+            return null;
+        }
 
     }
 }

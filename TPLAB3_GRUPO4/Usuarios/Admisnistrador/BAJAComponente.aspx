@@ -14,7 +14,7 @@
 
         <!-- Selección del componente -->
         <div class="mb-3">
-            <label class="form-label">Buscar componente a eliminar</label>
+            Ingresar ID del Componente
             </div>
         <div class="mb-3">
            

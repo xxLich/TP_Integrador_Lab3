@@ -30,7 +30,7 @@ namespace Negocios
         public int EliminarComponenteNegocio(int ID) //
         {
            componente.IDComponente = ID;
-            int estado = datosC.EliminarMedicosDatos(componente);
+            int estado = datosC.EliminarComponenteDatos(componente);
             if (estado >= 1)
             {
                 return estado;
