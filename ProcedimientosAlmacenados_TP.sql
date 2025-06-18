@@ -352,7 +352,9 @@ BEGIN
 	IF EXISTS (SELECT 1 FROM Componentes WHERE IDComponente = @IDComponente)
 	BEGIN
 		UPDATE Componentes
-		SET Estado = 0
+		SET
+			Estado = 0,
+			Stock = 0
 		WHERE IDComponente = @IDComponente;
 	END
 	ELSE
