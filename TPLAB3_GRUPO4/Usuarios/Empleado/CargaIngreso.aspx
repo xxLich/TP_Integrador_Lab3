@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CargaIngreso.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Empleado.CargaIngreso" %>
+﻿﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CargaIngreso.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Empleado.CargaIngreso" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -39,6 +39,10 @@
         <div class="mb-3">
             <asp:Button ID="btnRegistrarIngreso" runat="server" Text="Registrar Ingreso" CssClass="btn btn-success" OnClick="btnRegistrarIngreso_Click" />
         </div>
+
+        <asp:Label ID="lblMensajeIngreso" runat="server" />
+
+
 
         <!-- Tabla para mostrar los detalles -->
         <h3>Detalles de Ingreso</h3>

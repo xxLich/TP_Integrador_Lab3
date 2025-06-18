@@ -40,6 +40,12 @@ namespace Negocios
                 return estado;
             }
         }
+        public DataTable ObtenerComponentePorID(int id)
+        {
+            return datosC.ObtenerComponentePorID(id);
+        }
+
+
     }
 }
     
