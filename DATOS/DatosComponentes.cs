@@ -95,7 +95,7 @@ namespace DATOS
             return null;
         }
 
-        public int EliminarMedicosDatos(Componente componente)
+        public int EliminarComponenteDatos(Componente componente)
         {
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = "BAJACOMPONENTES";

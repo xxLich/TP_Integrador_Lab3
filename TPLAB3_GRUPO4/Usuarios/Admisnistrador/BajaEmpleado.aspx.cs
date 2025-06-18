@@ -13,5 +13,10 @@ namespace TPLAB3_GRUPO4.Usuarios.Admisnistrador
         {
 
         }
+
+        protected void grdbajaUsuario_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
     }
 }
