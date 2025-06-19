@@ -26,11 +26,14 @@ namespace Negocios
             datos.RegistrarVenta(venta);
         }
 
-        public DataTable ObtenerDetalleVentasParaGrid()
+        public DataTable ObtenerVistaVentasParaGrid()
         {
-            return datos.ObtenerDetalleVentas();
+            return datos.ObtenerVistaVentas();
         }
 
-
+        public DataTable FiltroVistaVentasParaGrid(int idventa)
+        {
+            return datos.FiltroVistaVentas(idventa);
+        }
     }
 }

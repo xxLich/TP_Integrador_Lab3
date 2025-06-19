@@ -36,7 +36,7 @@ namespace TPLAB3_GRUPO4.Usuarios.Admisnistrador
             else
             {
                txtIDUsuario.Text = string.Empty;
-                lblMensaje.Text = "No se pudo eliminar el Componente";
+                lblMensaje.Text = "No se pudo eliminar el Usuario";
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
         }
@@ -55,7 +55,7 @@ namespace TPLAB3_GRUPO4.Usuarios.Admisnistrador
             {
                 grdBajaUsuario.DataSource = null;
                 grdBajaUsuario.DataBind();
-                lblMensaje.Text = "No se encontró el Componente.";
+                lblMensaje.Text = "No se encontró el Usuario.";
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
         }

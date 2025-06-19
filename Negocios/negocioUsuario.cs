@@ -9,10 +9,11 @@ using System.Threading.Tasks;
 using System.Data;
 namespace Negocios
 {
-   public class negocioUsuario
+    public class negocioUsuario
     {
         DatosUsuarios datosUsuarios = new DatosUsuarios();
-        
+        DataTable dt = new DataTable();
+
         public Usuario LoginUsuario(string email, byte[] claveHasheada)
         {
             DatosUsuarios datos = new DatosUsuarios();
@@ -47,6 +48,9 @@ namespace Negocios
             return datosUsuarios.FiltrarUsuarios(id);
         }
 
-
+        public DataTable ModificarUsuario(Usuario usuario)
+        {
+            return dt = datosUsuarios.ModificarUsuarioDatos(usuario);
+        }
     }
 }

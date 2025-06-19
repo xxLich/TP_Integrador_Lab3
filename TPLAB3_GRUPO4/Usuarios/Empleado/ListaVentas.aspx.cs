@@ -15,10 +15,7 @@ namespace TPLAB3_GRUPO4.Usuarios.Empleado
         NegocioVentas nv = new NegocioVentas();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                CargarGrid();
-            }
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         }
 
         protected void btnVolver_Click(object sender, EventArgs e)
@@ -28,19 +25,38 @@ namespace TPLAB3_GRUPO4.Usuarios.Empleado
 
         protected void btnFiltrar_Click(object sender, EventArgs e)
         {
+            int id = int.Parse(txtIDFiltro.Text);
+            dt= nv.FiltroVistaVentasParaGrid(id);
             
-          
-     }
+            if (dt != null && dt.Rows.Count > 0)
+            {
+                grdDetalleVenta.DataSource = dt;
+                grdDetalleVenta.DataBind();
+            }
+            else
+            {
+                grdDetalleVenta.DataSource = null;
+                grdDetalleVenta.DataBind();
+                lblMensaje.Text = "No se encontraron resultados.";
+            }
+        }
 
         public void CargarGrid()
         {
 
-            DataTable dt = nv.ObtenerDetalleVentasParaGrid();
+            dt = nv.ObtenerVistaVentasParaGrid();
             grdDetalleVenta.DataSource = dt;
            grdDetalleVenta.DataBind();
 
         }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            
+          
+                CargarGrid();
+            
+        }
     }
     
 }

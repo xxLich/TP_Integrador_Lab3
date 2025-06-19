@@ -83,34 +83,39 @@ namespace DATOS
 
             return true;
         }
-        public DataTable ObtenerDetalleVentas()
+        public DataTable ObtenerVistaVentas()
         {
             DataTable dt = new DataTable();
             string consulta = @"
-        SELECT 
-            DV.IDDetalle,
-            DV.Cantidad,
-            DV.PrecioUnitario,
-            DV.Cantidad * DV.PrecioUnitario AS Subtotal,
-            C.Nombre AS NombreComponente,
-            V.Total,
-            CL.Nombre AS NombreCliente
-        FROM DetalleVenta AS DV
-        INNER JOIN Componentes AS C ON DV.IDComponente = C.IDComponente
-        INNER JOIN Venta AS V ON V.IDVenta = DV.IDVenta
-        LEFT JOIN Cliente AS CL ON V.IDCliente = CL.IDCliente;
-    ";
+        SELECT *  FROM VW_Ventas";
 
             using (SqlConnection con = ad.ObtenerConexion())
             {
                 SqlCommand cmd = new SqlCommand(consulta, con);
-                ad.ObtenerTablaConComando("DetalleVentas", cmd);
+               return ad.ObtenerTablaConComando("VW_Ventas", cmd);
                 
             }
 
-            return dt;
+          
         }
+        public DataTable FiltroVistaVentas(int IDVenta)
+        {
+            DataTable dt = new DataTable();
+            string consulta = @"
+        SELECT *  FROM VW_Ventas AS VWV
+       WHERE VWV.IDVenta=@IDVenta";
+
+            using (SqlConnection con = ad.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand(consulta, con);
+                cmd.Parameters.AddWithValue("IDVenta", IDVenta);
+                return ad.ObtenerTablaConComando("VW_Ventas", cmd);
+
+            }
+
+
         }
+    }
 
     }
 

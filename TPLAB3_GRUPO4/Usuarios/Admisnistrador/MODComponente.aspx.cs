@@ -93,7 +93,7 @@ namespace TPLAB3_GRUPO4.Usuarios.Admisnistrador
             lblMensaje.Text = "Componente Modificado con exito";
             lblMensaje.ForeColor = System.Drawing.Color.Green;
 
-
+            btnBuscarID.Visible = true;
         }
 
         protected void grdCancelEditC_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)

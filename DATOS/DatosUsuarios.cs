@@ -10,6 +10,9 @@ namespace DATOS
     {
         private readonly string connectionString;
         readonly AccesoDatos ad = new AccesoDatos();
+        SqlConnection conexion = new SqlConnection();
+        SqlCommand cmd = new SqlCommand();
+        DataTable dt = new DataTable();
         public DatosUsuarios()
         {
             var setting = ConfigurationManager.ConnectionStrings["TP_INTEGRADOR_GP4"];
@@ -99,9 +102,11 @@ namespace DATOS
         {
 
             string consulta = @"
-         SELECT US.IDUsuarios,US.Nombre
+         SELECT US.IDUsuarios,US.Nombre,US.Apellido,US.Email,
+           R.Nombre AS NombreROl
+
              FROM  Usuarios AS us
-            
+            INNER JOIN Rol as R ON R.IDRol=US.IDRol
              WHERE US.IDUsuarios = @IDUsuarios AND US.Activo=1";
 
             // Crear el comando SQL
@@ -116,6 +121,28 @@ namespace DATOS
 
             return null;
         }
+        public DataTable ModificarUsuarioDatos(Usuario usuario)
+        {
+            conexion = ad.ObtenerConexion();
 
+            cmd = new SqlCommand("MODIFICACIONUSUARIO", conexion)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@IDUsuario", usuario.IDUsuario);
+            cmd.Parameters.AddWithValue("@Nombre",usuario.Nombre);
+            cmd.Parameters.AddWithValue("@Apellido", usuario.Apellido);
+            cmd.Parameters.AddWithValue("Email", usuario.Email);
+            cmd.Parameters.AddWithValue("@IDRol", usuario.Rol);
+            
+
+
+            ad.EjecutarProcedimientoAlmacenado(cmd, "MODIFICACIONUSUARIO");
+            if (ad != null)
+            {
+                return dt;
+            }
+            return null;
+        }
     }
 }
