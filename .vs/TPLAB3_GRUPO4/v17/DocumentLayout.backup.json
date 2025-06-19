@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|c:\\users\\mich\\documents\\github\\tp_integrador_lab3\\tplab3_grupo4\\usuarios\\empleado\\listaventas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|solutionrelative:tplab3_grupo4\\usuarios\\empleado\\listaventas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\datos\\datosventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B3CD0C8-72B8-454C-A531-C2D126CFD5CE}|DATOS\\DATOS.csproj|solutionrelative:datos\\datosventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\negocios\\negocioventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB051982-3954-4100-BB0A-612B50235687}|Negocios\\Negocios.csproj|solutionrelative:negocios\\negocioventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\tplab3_grupo4\\usuarios\\empleado\\listaventas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E75806B-5054-448B-9822-0F04564A51CB}|TPLAB3_GRUPO4\\TPLAB3_GRUPO4.csproj|solutionrelative:tplab3_grupo4\\usuarios\\empleado\\listaventas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Usuarios\\Admisnistrador\\ListaResumen.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TPLAB3_GRUPO4\\Usuarios\\Admisnistrador\\ListaResumen.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatosVentas.cs",
+              "DocumentMoniker": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\DatosVentas.cs",
+              "RelativeDocumentMoniker": "DATOS\\DatosVentas.cs",
+              "ToolTip": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\DATOS\\DatosVentas.cs",
+              "RelativeToolTip": "DATOS\\DatosVentas.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T18:34:10.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NegocioVentas.cs",
+              "DocumentMoniker": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\NegocioVentas.cs",
+              "RelativeDocumentMoniker": "Negocios\\NegocioVentas.cs",
+              "ToolTip": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\Negocios\\NegocioVentas.cs",
+              "RelativeToolTip": "Negocios\\NegocioVentas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T18:34:04.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ListaResumen.aspx",
+              "DocumentMoniker": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Usuarios\\Admisnistrador\\ListaResumen.aspx",
+              "RelativeDocumentMoniker": "TPLAB3_GRUPO4\\Usuarios\\Admisnistrador\\ListaResumen.aspx",
+              "ToolTip": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Usuarios\\Admisnistrador\\ListaResumen.aspx",
+              "RelativeToolTip": "TPLAB3_GRUPO4\\Usuarios\\Admisnistrador\\ListaResumen.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-19T18:27:08.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ListaVentas.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Usuarios\\Empleado\\ListaVentas.aspx.cs",
+              "RelativeDocumentMoniker": "TPLAB3_GRUPO4\\Usuarios\\Empleado\\ListaVentas.aspx.cs",
+              "ToolTip": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Usuarios\\Empleado\\ListaVentas.aspx.cs",
+              "RelativeToolTip": "TPLAB3_GRUPO4\\Usuarios\\Empleado\\ListaVentas.aspx.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T01:08:19.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ListaVentas.aspx",
+              "DocumentMoniker": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Usuarios\\Empleado\\ListaVentas.aspx",
+              "RelativeDocumentMoniker": "TPLAB3_GRUPO4\\Usuarios\\Empleado\\ListaVentas.aspx",
+              "ToolTip": "C:\\Users\\Mich\\Documents\\GitHub\\TP_Integrador_Lab3\\TPLAB3_GRUPO4\\Usuarios\\Empleado\\ListaVentas.aspx",
+              "RelativeToolTip": "TPLAB3_GRUPO4\\Usuarios\\Empleado\\ListaVentas.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-19T01:06:42.341Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
