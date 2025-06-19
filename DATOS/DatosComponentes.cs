@@ -11,7 +11,7 @@ namespace DATOS
 {
     public class DatosComponentes
     {
-
+        DataTable dt = new DataTable();
         readonly AccesoDatos ad = new AccesoDatos();
 
         SqlCommand cmd = new SqlCommand();
@@ -77,9 +77,10 @@ namespace DATOS
         {
             
             string consulta = @"
-         SELECT C.IDComponente,C.Nombre
+         SELECT C.IDComponente,C.Nombre,C.Descripcion,CA.IDCategoria,
+          C.PrecioVenta,C.PrecioCosto,C.Stock,C.FechaCreacion
              FROM  Componentes AS C
-            
+            INNER JOIN Categoria AS CA ON C.IDCategoria=CA.IDCategoria
              WHERE C.IDComponente = @IDComponente AND C.Estado=1";
 
             // Crear el comando SQL
@@ -95,6 +96,32 @@ namespace DATOS
             return null;
         }
 
+        public DataTable ModificarComponenteDatos(Componente componente)
+        {
+            conexion = ad.ObtenerConexion();
+
+            cmd = new SqlCommand("MODIFICACIONCOMPONENTES", conexion)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            cmd.Parameters.AddWithValue("@IDComponente", componente.IDComponente);
+            cmd.Parameters.AddWithValue("@Nombre", componente.Nombre);
+            cmd.Parameters.AddWithValue("@Descripcion", componente.Descripcion);
+            cmd.Parameters.AddWithValue("@IDCategoria", componente.Categoria);
+            cmd.Parameters.AddWithValue("@PrecioVenta", componente.PrecioVenta);
+            cmd.Parameters.AddWithValue("@PrecioCosto", componente.PrecioCosto);
+            cmd.Parameters.AddWithValue("@Stock", componente.Stock);
+            cmd.Parameters.AddWithValue("@FechaCreacion", componente.FechaCreacion);
+            cmd.Parameters.AddWithValue("@Estado", 1);
+
+
+            ad.EjecutarProcedimientoAlmacenado(cmd, "MODIFICACIONCOMPONENTES");
+            if (ad != null)
+            {
+                return dt;
+            }
+            return null;
+        }
         public int EliminarComponenteDatos(Componente componente)
         {
             SqlCommand cmd = new SqlCommand();
@@ -113,7 +140,7 @@ namespace DATOS
                 cmd.Parameters.AddWithValue("@id", id);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
+                
                 da.Fill(dt);
                 return dt;
             }

@@ -8,11 +8,12 @@ using DATOS;
 using ENTIDADES;
 namespace Negocios
 {
-   public class NegocioComponente
+    public class NegocioComponente
     {
         private readonly AccesoDatos accesoDatos = new AccesoDatos();
         readonly Componente componente = new Componente();
         readonly DatosComponentes datosC = new DatosComponentes();
+        DataTable dt = new DataTable();
         public bool agregarComponente(Componente componente)
         {
 
@@ -44,7 +45,10 @@ namespace Negocios
         {
             return datosC.ObtenerComponentePorID(id);
         }
-
+        public DataTable ModificarComponente(Componente componente)
+        {
+            return dt=datosC.ModificarComponenteDatos(componente);
+        }
 
     }
 }

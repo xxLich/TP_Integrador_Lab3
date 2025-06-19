@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModEmpleado.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Admisnistrador.ModEmpleado" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ModEmpleado.aspx.cs" Inherits="TPLAB3_GRUPO4.Usuarios.Admisnistrador.ModEmpleado" %>
 
 <!DOCTYPE html>
 
@@ -15,8 +15,7 @@
         <!-- Selección del empleado -->
         <div class="mb-3">
             <label for="ddlEmpleados" class="form-label">Seleccionar Empleado</label>
-            <asp:DropDownList 
-            </asp:DropDownList>
+          
         </div>
 
         <!-- Campos del empleado -->
