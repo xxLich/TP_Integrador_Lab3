@@ -200,8 +200,8 @@ CREATE PROCEDURE MODIFICACIONCOMPONENTES
 	@PrecioVenta decimal (10,2),
 	@PrecioCosto decimal (10,2),
 	@Stock int,
-	@FechaCreacion date,
-	@Estado bit
+	@FechaCreacion date
+	
 AS 
 	BEGIN 
 		UPDATE Componentes
@@ -211,8 +211,8 @@ AS
 		PrecioVenta = @PrecioVenta,
 		PrecioCosto = @PrecioCosto,
 		Stock = @Stock,
-		FechaCreacion = @FechaCreacion,
-		Estado = @Estado
+		FechaCreacion = @FechaCreacion
+		
 	WHERE IDComponente = @IDComponente
 END;
 GO
@@ -250,38 +250,20 @@ GO
 
 -- Usuario
 CREATE PROCEDURE MODIFICACIONUSUARIO
-	@IDUsuario INT,
-	@Nombre VARCHAR(50),
-	@Apellido VARCHAR(50),
-	@Email VARCHAR(255),
-	@Clave VARCHAR(100),  
-	@IDRol INT,
-	@Activo BIT
+	 @IDUsuario INT,
+    @Nombre VARCHAR(50),
+    @Apellido VARCHAR(50),
+    @Email VARCHAR(255),
+    @IDRol INT
 AS
 BEGIN
-	IF @Clave IS NULL OR @Clave = ''
-	BEGIN
-		UPDATE Usuarios
-		SET
-			Nombre = @Nombre,
-			Apellido = @Apellido,
-			Email = @Email,
-			IDRol = @IDRol,
-			Activo = @Activo
-		WHERE IDUsuarios = @IDUsuario;
-	END
-	ELSE
-	BEGIN
-		UPDATE Usuarios
-		SET
-			Nombre = @Nombre,
-			Apellido = @Apellido,
-			Email = @Email,
-			Clave = HASHBYTES('SHA2_256', @Clave),
-			IDRol = @IDRol,
-			Activo = @Activo
-		WHERE IDUsuarios = @IDUsuario;
-	END
+    UPDATE Usuarios
+    SET
+        Nombre = @Nombre,
+        Apellido = @Apellido,
+        Email = @Email,
+        IDRol = @IDRol
+    WHERE IDUsuarios = @IDUsuario;
 END
 GO
 
