@@ -14,29 +14,19 @@
 
         <!-- Selección del empleado -->
         <div class="mb-3">
-            <label for="ddlEmpleados" class="form-label">Seleccionar Empleado</label>
-          
-        </div>
+            &nbsp;</div>
 
         <!-- Campos del empleado -->
         <div class="mb-3">
-            <label for="txtNombre" class="form-label">Nombre</label>
-            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" />
         </div>
 
         <div class="mb-3">
-            <label for="txtApellido" class="form-label">Apellido</label>
-            <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" />
         </div>
 
         <div class="mb-3">
-            <label for="txtEmail" class="form-label">Email</label>
-            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" />
-        </div>
+            &nbsp;</div>
 
         <div class="mb-3">
-            <label for="txtTelefono" class="form-label">Teléfono</label>
-            <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" />
         </div>
 
         <!-- Botón Guardar Cambios -->

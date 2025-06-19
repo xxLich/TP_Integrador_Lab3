@@ -25,8 +25,11 @@ namespace Negocios
         {
             datos.RegistrarVenta(venta);
         }
-       
 
+        public DataTable ObtenerDetalleVentasParaGrid()
+        {
+            return datos.ObtenerDetalleVentas();
+        }
 
 
     }

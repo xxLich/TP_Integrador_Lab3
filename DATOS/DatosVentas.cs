@@ -83,7 +83,34 @@ namespace DATOS
 
             return true;
         }
+        public DataTable ObtenerDetalleVentas()
+        {
+            DataTable dt = new DataTable();
+            string consulta = @"
+        SELECT 
+            DV.IDDetalle,
+            DV.Cantidad,
+            DV.PrecioUnitario,
+            DV.Cantidad * DV.PrecioUnitario AS Subtotal,
+            C.Nombre AS NombreComponente,
+            V.Total,
+            CL.Nombre AS NombreCliente
+        FROM DetalleVenta AS DV
+        INNER JOIN Componentes AS C ON DV.IDComponente = C.IDComponente
+        INNER JOIN Venta AS V ON V.IDVenta = DV.IDVenta
+        LEFT JOIN Cliente AS CL ON V.IDCliente = CL.IDCliente;
+    ";
 
+            using (SqlConnection con = ad.ObtenerConexion())
+            {
+                SqlCommand cmd = new SqlCommand(consulta, con);
+                ad.ObtenerTablaConComando("DetalleVentas", cmd);
+                
+            }
+
+            return dt;
+        }
+        }
 
     }
-}
+

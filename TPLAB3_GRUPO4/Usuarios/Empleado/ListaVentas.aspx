@@ -23,7 +23,64 @@
                 <asp:Button ID="btnFiltrar" runat="server" Text="Filtrar" OnClick="btnFiltrar_Click" CssClass="btn btn-primary ms-2" />
             </div>
 
-            <asp:GridView ID="grdVentas" runat="server" CssClass="table table-striped"></asp:GridView>
+           <asp:GridView ID="grdDetalleVenta" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" CellPadding="4" ForeColor="#333333" GridLines="None">
+               <AlternatingRowStyle BackColor="White" />
+    <Columns>
+        <asp:TemplateField HeaderText="ID Detalle">
+            <ItemTemplate>
+                <asp:Label ID="lblIDDetalle" runat="server" Text='<%# Bind("IDDetalle") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Cantidad">
+            <ItemTemplate>
+                <asp:Label ID="lblCantidad" runat="server" Text='<%# Bind("Cantidad") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Precio Unitario">
+            <ItemTemplate>
+                <asp:Label ID="lblPrecioUnitario" runat="server" Text='<%# Bind("PrecioUnitario") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Subtotal">
+            <ItemTemplate>
+                <asp:Label ID="lblSubtotal" runat="server" Text='<%# Bind("Subtotal") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Componente">
+            <ItemTemplate>
+                <asp:Label ID="lblNombreComponente" runat="server" Text='<%# Bind("NombreComponente") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Total Venta">
+            <ItemTemplate>
+                <asp:Label ID="lblTotalVenta" runat="server" Text='<%# Bind("Total") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+
+        <asp:TemplateField HeaderText="Cliente">
+            <ItemTemplate>
+                <asp:Label ID="lblNombreCliente" runat="server" Text='<%# Bind("NombreCliente") %>'></asp:Label>
+            </ItemTemplate>
+        </asp:TemplateField>
+    </Columns>
+               <EditRowStyle BackColor="#2461BF" />
+               <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+               <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+               <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+               <RowStyle BackColor="#EFF3FB" />
+               <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+               <SortedAscendingCellStyle BackColor="#F5F7FB" />
+               <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+               <SortedDescendingCellStyle BackColor="#E9EBEF" />
+               <SortedDescendingHeaderStyle BackColor="#4870BE" />
+</asp:GridView>
+
+     
 
         </div>
     </form>

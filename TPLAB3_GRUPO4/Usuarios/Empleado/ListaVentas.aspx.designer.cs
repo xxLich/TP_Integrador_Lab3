@@ -60,12 +60,12 @@ namespace TPLAB3_GRUPO4.Usuarios.Empleado
         protected global::System.Web.UI.WebControls.Button btnFiltrar;
 
         /// <summary>
-        /// Control grdVentas.
+        /// Control grdDetalleVenta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grdVentas;
+        protected global::System.Web.UI.WebControls.GridView grdDetalleVenta;
     }
 }
