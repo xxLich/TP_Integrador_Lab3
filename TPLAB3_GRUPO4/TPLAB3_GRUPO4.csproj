@@ -93,6 +93,7 @@
     <Content Include="Usuarios\Empleado\CargaIngreso.aspx" />
     <Content Include="Usuarios\Empleado\CargaVenta.aspx" />
     <Content Include="Usuarios\Empleado\inicioEmpleado.aspx" />
+    <Content Include="Usuarios\Empleado\ListaVentas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +188,13 @@
     </Compile>
     <Compile Include="Usuarios\Empleado\inicioEmpleado.aspx.designer.cs">
       <DependentUpon>inicioEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Empleado\ListaVentas.aspx.cs">
+      <DependentUpon>ListaVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Empleado\ListaVentas.aspx.designer.cs">
+      <DependentUpon>ListaVentas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
