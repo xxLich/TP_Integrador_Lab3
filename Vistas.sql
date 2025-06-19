@@ -49,6 +49,7 @@ INNER JOIN VW_Stock S ON D.IDComponente = S.IDComponente;
 GO
 
 -- Resumen Ventas
+
 CREATE VIEW VW_ResumenVentas AS
 SELECT
     V.FechaVenta,
@@ -62,5 +63,3 @@ JOIN
 GROUP BY
     V.FechaVenta;
 GO
-
--- SELECT * FROM VW_ResumenVentas; Para Probar

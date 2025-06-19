@@ -10,6 +10,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
+	-- Verifica los registros nuevos
     IF EXISTS (
         SELECT 1
         FROM inserted I
@@ -26,6 +27,7 @@ BEGIN
         RETURN;
     END
 
+	-- Si todo es correcto, descuenta la cantidad vendida al stock de cada componente
     UPDATE C
     SET C.Stock = C.Stock - TotalVenta.CantidadVendida
     FROM Componentes C

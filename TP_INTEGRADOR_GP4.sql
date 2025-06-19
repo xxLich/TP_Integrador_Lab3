@@ -7,7 +7,7 @@ GO
 
 CREATE TABLE Rol(
 	IDRol INT PRIMARY KEY IDENTITY(1,1),
-	Nombre varchar(50) NOT NULL
+	Nombre VARCHAR(50) NOT NULL
 );
 GO
 
@@ -16,29 +16,30 @@ CREATE TABLE Cliente(
 	Nombre VARCHAR(50) NOT NULL,
 	Domicilio VARCHAR(100) NOT NULL,
 	Telefono VARCHAR(20),
-	DNI INT NOT NULL
+	DNI INT NOT NULL,
+	Estado BIT NOT NULL
 );
 GO
--- HICE CAMBIO PARA UN ENCRIPTAR Y EL ESTADO DEL USUARIO 
+
 CREATE TABLE Usuarios(
 	IDUsuarios INT PRIMARY KEY IDENTITY(1,1),
 	Nombre VARCHAR(50) NOT NULL,
 	Apellido VARCHAR(50) NOT NULL,
 	Email VARCHAR(255) NOT NULL,
-	Clave VARBINARY(64) NOT NULL,        -- Hash SHA-256 ocupa 32 bytes, varbinary(64) para holgura
+	Clave VARBINARY(64) NOT NULL,
 	IDRol INT NOT NULL,
 	FechaRegristro DATETIME NOT NULL,
-	Activo BIT NOT NULL DEFAULT 1,       -- 1=activo, 0=inactivo
+	Activo BIT NOT NULL DEFAULT 1,
 	FOREIGN KEY(IDRol) REFERENCES Rol(IDRol)
 );
 
 
 CREATE TABLE Venta(
 	IDVenta INT PRIMARY KEY IDENTITY(1,1),
-	IDUsuarios int NOT NULL,
+	IDUsuarios INT NOT NULL,
 	IDCliente INT NOT NULL,
 	FechaVenta DATETIME NOT NULL,
-	Total decimal(10,2) NOT NULL, 
+	Total DECIMAL(10,2) NOT NULL, 
 	Estado BIT NOT NULL,
 
 	FOREIGN KEY(IDUsuarios) REFERENCES Usuarios(IDUsuarios),
@@ -49,14 +50,16 @@ GO
 CREATE TABLE Categoria(
 	IDCategoria INT PRIMARY KEY IDENTITY(1,1),
 	Nombre VARCHAR(50) NOT NULL,
-	Descripcion VARCHAR(100)
+	Descripcion VARCHAR(100),
+	Estado BIT NOT NULL
 );
 GO
 
 CREATE TABLE Proveedor(
 	IDProveedor INT PRIMARY KEY IDENTITY(1,1),
 	Nombre VARCHAR(50) NOT NULL,
-	Descripcion VARCHAR(100)
+	Descripcion VARCHAR(100),
+	Estado BIT NOT NULL
 );
 GO
 
@@ -111,7 +114,7 @@ CREATE TABLE DetalleVenta(
 );
 GO
 
--- DATOS AGREGADOS  ( SI LES DA  ERROR VERIFIQUEN LOS IDUsuarios-IDVentas)
+-- Datos de prueba
 
 -- Insertar Roles
 INSERT INTO Rol (Nombre) VALUES 
@@ -127,15 +130,15 @@ INSERT INTO Usuarios (Nombre, Apellido, Email, Clave, IDRol, FechaRegristro) VAL
 
 
 -- Insertar Categorías
-INSERT INTO Categoria (Nombre, Descripcion) VALUES
-('Hardware', 'Componentes físicos'),
-('Software', 'Programas y licencias'),
-('Accesorios', 'Complementos de hardware');
+INSERT INTO Categoria (Nombre, Descripcion, Estado) VALUES
+('Hardware', 'Componentes físicos', 1),
+('Software', 'Programas y licencias', 1),
+('Accesorios', 'Complementos de hardware', 1);
 
 -- Insertar Proveedores
-INSERT INTO Proveedor (Nombre, Descripcion) VALUES
-('Proveedor A', 'Proveedor de Hardware'),
-('Proveedor B', 'Proveedor de Software');
+INSERT INTO Proveedor (Nombre, Descripcion, Estado) VALUES
+('Proveedor A', 'Proveedor de Hardware', 1),
+('Proveedor B', 'Proveedor de Software', 1);
 
 -- Insertar Componentes
 INSERT INTO Componentes (Nombre, Descripcion, IDCategoria, PrecioVenta, PrecioCosto, Stock, FechaCreacion, Estado) VALUES
@@ -145,9 +148,9 @@ INSERT INTO Componentes (Nombre, Descripcion, IDCategoria, PrecioVenta, PrecioCo
 ('Windows 11', 'Licencia original', 2, 45000.00, 30000.00, 10, GETDATE(), 1);
 
 -- Insertar Clientes
-INSERT INTO Cliente (Nombre, Domicilio, Telefono, DNI) VALUES
-('María Fernández', 'Av. Siempre Viva 123', '1134567890', 30567890),
-('Pedro Sánchez', 'Calle Falsa 456', '1145678901', 28654321);
+INSERT INTO Cliente (Nombre, Domicilio, Telefono, DNI, Estado) VALUES
+('María Fernández', 'Av. Siempre Viva 123', '3056789', 30567890, 1),
+('Pedro Sánchez', 'Calle Falsa 456', '2865432', 28654321, 1);
 
 -- Insertar Ingresos
 INSERT INTO Ingreso (IDUsuarios, FechaIngreso, IDProveedor, Total) VALUES
@@ -168,6 +171,6 @@ INSERT INTO Venta (IDUsuarios, IDCliente, FechaVenta, Total, Estado) VALUES
 
 -- Insertar DetalleVenta
 INSERT INTO DetalleVenta (IDVenta, IDComponente, Cantidad, PrecioUnitario) VALUES
-(1, 1, 5, 1500),
-(1, 2, 2, 5000),
-(2, 3, 2, 25000);
+(1, 1, 5, 1500.00),
+(1, 2, 2, 5000.00),
+(2, 3, 2, 25000.00);
