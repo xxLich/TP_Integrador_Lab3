@@ -35,7 +35,7 @@
         <!-- Precio Venta -->
         <div class="mb-3">
             <label for="txtPrecioVenta" class="form-label">Precio de venta</label>
-            <asp:TextBox ID="txtPrecioVenta" runat="server" TextMode="Number" CssClass="form-control" placeholder="Precio de venta"</asp:TextBox>
+            <asp:TextBox ID="txtPrecioVenta" runat="server" TextMode="Number" CssClass="form-control" placeholder="Precio de venta"></asp:TextBox>
         </div>
 
         <!-- Precio Costo -->
