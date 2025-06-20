@@ -146,6 +146,38 @@ namespace DATOS
             }
         }
 
+
+
+        //obtenerstockComponente
+        public DataTable ObtenerStockComponentes()
+        {
+            using (SqlConnection conexion = ad.ObtenerConexion())
+            {
+                string consulta = "SELECT * FROM VW_Stock";
+                SqlDataAdapter da = new SqlDataAdapter(consulta, conexion);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        public DataTable FiltrarStockPorNombreComponente(string nombreComponente)
+        {
+            using (SqlConnection conexion = ad.ObtenerConexion())
+            {
+                string consulta = "SELECT * FROM VW_Stock WHERE Nombre_Componente LIKE @Nombre + '%'";
+                using (SqlCommand cmd = new SqlCommand(consulta, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@Nombre", nombreComponente);
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
     }
 }
 

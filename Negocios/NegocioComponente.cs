@@ -49,7 +49,15 @@ namespace Negocios
         {
             return dt=datosC.ModificarComponenteDatos(componente);
         }
+        public DataTable ObtenerStockCompleto()
+        {
+            return datosC.ObtenerStockComponentes();
+        }
 
+        public DataTable FiltrarStockPorNombre(string nombreComponente)
+        {
+            return datosC.FiltrarStockPorNombreComponente(nombreComponente);
+        }
     }
 }
     

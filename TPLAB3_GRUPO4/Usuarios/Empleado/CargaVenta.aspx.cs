@@ -84,9 +84,11 @@ namespace TPLAB3_GRUPO4.Usuarios.Empleado
         };
             gvUltimaVenta.DataBind();
         }
-    
 
-
-}
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Usuarios/Empleado/inicioEmpleado.aspx");
+        }
+    }
 }
     

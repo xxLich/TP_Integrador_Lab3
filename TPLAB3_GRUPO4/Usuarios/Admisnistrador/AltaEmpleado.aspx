@@ -11,23 +11,24 @@
 <body>
     <form id="form1" runat="server" class="container mt-5">
         <h2 class="mb-4">Alta de Empleado</h2>
+        <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" CssClass="btn btn-secondary" />
 
         <!-- Nombre -->
         <div class="mb-3">
             <label for="txtNombre" class="form-label">Nombre</label>
-            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre" required="true"></asp:TextBox>
+            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre" ></asp:TextBox>
         </div>
 
         <!-- Apellido -->
         <div class="mb-3">
             <label for="txtApellido" class="form-label">Apellido</label>
-            <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido" required="true"></asp:TextBox>
+            <asp:TextBox ID="txtApellido" runat="server" CssClass="form-control" placeholder="Apellido" ></asp:TextBox>
         </div>
 
         <!-- Email -->
         <div class="mb-3">
             <label for="txtEmail" class="form-label">Email</label>
-            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="ejemplo@correo.com" required="true"></asp:TextBox>
+            <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" TextMode="Email" placeholder="ejemplo@correo.com" ></asp:TextBox>
         </div>
 
         <!-- Teléfono -->
@@ -39,18 +40,18 @@
         <!-- Fecha de Ingreso -->
         <div class="mb-3">
             <label for="txtFechaIngreso" class="form-label">Fecha de Ingreso</label>
-            <asp:TextBox ID="txtFechaIngreso" runat="server" CssClass="form-control" TextMode="Date" required="true"></asp:TextBox>
+            <asp:TextBox ID="txtFechaIngreso" runat="server" CssClass="form-control" TextMode="Date" ></asp:TextBox>
             </div>
         <!-- Clave -->
         <div class="mb-3">
             <label for="txtClave" class="form-label">Clave</label>
-            <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" placeholder="Contraseña" required="true" TextMode="Password"></asp:TextBox>
+            <asp:TextBox ID="txtclave" runat="server" CssClass="form-control" placeholder="Contraseña"  TextMode="Password"></asp:TextBox>
         </div>
 
         <!-- Cargo -->
         <div class="mb-3">
             <label for="ddlCargo" class="form-label">Cargo</label>
-            <asp:DropDownList ID="ddlCargo" runat="server" CssClass="form-select" required="true">
+            <asp:DropDownList ID="ddlCargo" runat="server" CssClass="form-select" >
                 <asp:ListItem Text="Seleccione un cargo" Value="" />
                 <asp:ListItem Text="Administrativo" Value="1" />
            

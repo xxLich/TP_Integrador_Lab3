@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server" class="container mt-5">
         <h2 class="mb-4 text-primary">Modificar Componente</h2>
+        <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" CssClass="btn btn-secondary" />
 
         <div class="mb-3">
             <label for="TextBox1" class="form-label">ID Componente</label>

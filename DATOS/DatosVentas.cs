@@ -115,7 +115,47 @@ namespace DATOS
 
 
         }
-    }
+        public DataTable ObtenerResumenVentas()
+        {
+            using (SqlConnection conexion = ad.ObtenerConexion())
+            {
+                string consulta = "SELECT * FROM VW_ResumenVentas";
+                SqlDataAdapter da = new SqlDataAdapter(consulta, conexion);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        public DataTable FiltrarResumenPorFecha(DateTime fecha)
+        {
+            using (SqlConnection conexion = ad.ObtenerConexion())
+            {
+                string consulta = "SELECT * FROM VW_ResumenVentas WHERE FechaVenta = @Fecha";
+                SqlCommand cmd = new SqlCommand(consulta, conexion);
+                cmd.Parameters.AddWithValue("@Fecha", fecha);
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
+
+}
 

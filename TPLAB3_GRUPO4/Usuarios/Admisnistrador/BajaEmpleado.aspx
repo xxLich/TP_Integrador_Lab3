@@ -10,6 +10,7 @@
 <body>
     <form id="form1" runat="server" class="container mt-5">
         <h2 class="mb-4 text-danger">Baja de Empleado</h2>
+        <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" CssClass="btn btn-secondary" />
 
         <!-- ID Usuario -->
         <div class="mb-3">

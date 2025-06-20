@@ -35,5 +35,21 @@ namespace Negocios
         {
             return datos.FiltroVistaVentas(idventa);
         }
+        public DataTable ObtenerResumenCompleto()
+        {
+            return datos.ObtenerResumenVentas();
+        }
+
+        public DataTable FiltrarResumenPorFecha(DateTime fecha)
+        {
+            return datos.FiltrarResumenPorFecha(fecha);
+        }
+
+
+
+
+
+
+
     }
 }

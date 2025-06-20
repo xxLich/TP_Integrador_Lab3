@@ -11,6 +11,7 @@
 <body>
     <form id="form1" runat="server" class="container mt-5">
         <h2 class="text-primary mb-4">Registrar Cliente</h2>
+        <asp:Button ID="btnVolver" runat="server" OnClick="btnVolver_Click" Text="Volver" CssClass="btn btn-secondary" />
 
         <div class="mb-3">
             <label for="txtNombreCliente" class="form-label">Nombre</label>

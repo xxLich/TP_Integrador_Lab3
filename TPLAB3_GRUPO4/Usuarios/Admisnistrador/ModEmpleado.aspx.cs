@@ -97,5 +97,10 @@ namespace TPLAB3_GRUPO4.Usuarios.Admisnistrador
            grdUsuario.EditIndex = -1;
             CargarGrid();
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Usuarios/Admisnistrador/inicioAdmin.aspx");
+        }
     }
 }

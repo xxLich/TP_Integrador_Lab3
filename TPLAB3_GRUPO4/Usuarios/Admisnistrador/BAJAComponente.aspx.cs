@@ -60,5 +60,10 @@ namespace TPLAB3_GRUPO4.Usuarios.Admisnistrador
                 lblMensaje.ForeColor = System.Drawing.Color.Red;
             }
         }
+
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Usuarios/Admisnistrador/inicioAdmin.aspx");
+        }
     }
 }

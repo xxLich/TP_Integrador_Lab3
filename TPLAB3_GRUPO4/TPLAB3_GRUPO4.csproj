@@ -93,6 +93,8 @@
     <Content Include="Usuarios\Empleado\CargaIngreso.aspx" />
     <Content Include="Usuarios\Empleado\CargaVenta.aspx" />
     <Content Include="Usuarios\Empleado\inicioEmpleado.aspx" />
+    <Content Include="Usuarios\Empleado\ListaResumenVenta.aspx" />
+    <Content Include="Usuarios\Empleado\ListaStock.aspx" />
     <Content Include="Usuarios\Empleado\ListaVentas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -188,6 +190,20 @@
     </Compile>
     <Compile Include="Usuarios\Empleado\inicioEmpleado.aspx.designer.cs">
       <DependentUpon>inicioEmpleado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Empleado\ListaResumenVenta.aspx.cs">
+      <DependentUpon>ListaResumenVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Empleado\ListaResumenVenta.aspx.designer.cs">
+      <DependentUpon>ListaResumenVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Empleado\ListaStock.aspx.cs">
+      <DependentUpon>ListaStock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Empleado\ListaStock.aspx.designer.cs">
+      <DependentUpon>ListaStock.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\Empleado\ListaVentas.aspx.cs">
       <DependentUpon>ListaVentas.aspx</DependentUpon>

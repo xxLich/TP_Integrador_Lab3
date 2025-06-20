@@ -115,6 +115,9 @@ namespace TPLAB3_GRUPO4.Usuarios.Admisnistrador
             ddlCategoria.Items.Insert(0, new ListItem("--SELECCIONAR Categoria--", "0"));
         }
 
-
+        protected void btnVolver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Usuarios/Admisnistrador/inicioAdmin.aspx");
+        }
     }
 }
