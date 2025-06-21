@@ -19,12 +19,12 @@ BEGIN
     SET C.Estado = 0
     FROM Componentes C
     INNER JOIN inserted I ON C.IDComponente = I.IDComponente
-    WHERE I.Stock = 0 AND C.Estado <> 0;
+    WHERE I.Stock = 0 AND C.Stock = 0 AND C.Estado <> 0;
 
     -- Actualizar Estado a 1 si Stock > 0 y Estado <> 1
     UPDATE C
     SET C.Estado = 1
     FROM Componentes C
     INNER JOIN inserted I ON C.IDComponente = I.IDComponente
-    WHERE I.Stock > 0 AND C.Estado <> 1;
+    WHERE I.Stock > 0 AND C.Stock > 0 AND C.Estado <> 1;
 END;
